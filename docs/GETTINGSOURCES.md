@@ -13,7 +13,7 @@ Remember that you need Java 8.
 ![Oomph select product](oomph-select-product.png "Select product") 
 4. On the *Projects* page, click on the "+" icon (*Add user projects*) in the top right.
 ![Add user projects](oomph-add-user-project.png "Add user projects") 
-5. In the *Add User Projects* dialog, select *Github Projects* in the *Catalog* dropdwon and in the field *Resource URIs* paste the following URL. TODO
+5. In the *Add User Projects* dialog, select *Github Projects* in the *Catalog* dropdwon and in the field *Resource URIs* paste the following URL: https://raw.githubusercontent.com/LorenzoBettini/packtpub-xtext-book-2nd-examples/master/org.example.oomph/XtextBookExamples.setup
 6. Select the "Xtext Book Examples" node and press Next.
 ![Select project](oomph-select-project.png "Select project") 
 7. Choose your preferred installation settings on the *Variables* page; in particular, select the checkbox *Show all variables* and in the dropdwon *Xtext Book Examples Github repository* make sure you select *HTTPS (read-only, anonymous)*.
