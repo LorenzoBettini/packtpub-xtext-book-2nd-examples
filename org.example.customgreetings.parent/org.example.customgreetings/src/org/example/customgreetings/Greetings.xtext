@@ -1,0 +1,10 @@
+grammar org.example.customgreetings.Greetings with org.eclipse.xtext.common.Terminals
+
+//generate greetings "http://www.example.org/customgreetings/Greetings"
+import "http://www.example.org/customgreetings/Greetings"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

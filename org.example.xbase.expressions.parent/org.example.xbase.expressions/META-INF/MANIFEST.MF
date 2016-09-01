@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.xbase.expressions
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.xbase.expressions; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.common.types,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.xbase.expressions.expressions.impl,
+ org.example.xbase.expressions,
+ org.example.xbase.expressions.expressions,
+ org.example.xbase.expressions.parser.antlr,
+ org.example.xbase.expressions.services,
+ org.example.xbase.expressions.serializer,
+ org.example.xbase.expressions.expressions.util,
+ org.example.xbase.expressions.validation,
+ org.example.xbase.expressions.scoping,
+ org.example.xbase.expressions.parser.antlr.internal,
+ org.example.xbase.expressions.jvmmodel
+Import-Package: org.apache.log4j

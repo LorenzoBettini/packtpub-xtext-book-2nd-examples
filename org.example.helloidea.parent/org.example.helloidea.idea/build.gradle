@@ -1,0 +1,20 @@
+//see https://github.com/xtext/xtext-gradle-plugin/tree/master/xtext-idea-gradle-plugin
+apply plugin: 'org.xtext.idea-plugin'
+apply plugin: 'org.xtext.idea-repository'
+
+dependencies {
+	compile project(':org.example.helloidea')
+	compile project(':org.example.helloidea.ide')
+}
+
+ideaDevelopment {
+	ideaVersion = '143.381.42'
+	pluginRepositories {
+		url "http://download.eclipse.org/modeling/tmf/xtext/idea/${xtextVersion}/updatePlugins.xml"
+	}
+	pluginDependencies {
+		id 'org.eclipse.xtext.idea' version xtextVersion
+	}
+}
+
+ideaRepository.rootUrl = "${buildDir}/ideaRepository"

@@ -1,0 +1,9 @@
+grammar org.example.helloweb.HelloWeb with org.eclipse.xtext.common.Terminals
+
+generate helloWeb "http://www.example.org/helloweb/HelloWeb"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

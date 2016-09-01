@@ -1,0 +1,13 @@
+grammar org.example.xbase.expressions.Expressions with org.eclipse.xtext.xbase.Xbase
+
+generate expressions "http://www.example.org/xbase/expressions/Expressions"
+
+import "http://www.eclipse.org/xtext/xbase/Xbase"
+
+ExpressionsModel returns XBlockExpression:
+	{ExpressionsModel}
+	(expressions+=XExpressionOrVarDeclaration ';'?)*;
+
+XPrimaryExpression returns XExpression:
+	{EvalExpression} 'eval' expression=XExpression |
+	super;

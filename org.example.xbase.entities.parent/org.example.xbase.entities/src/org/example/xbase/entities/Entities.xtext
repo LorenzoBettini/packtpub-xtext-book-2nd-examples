@@ -1,0 +1,28 @@
+grammar org.example.xbase.entities.Entities
+	with org.eclipse.xtext.xbase.annotations.XbaseWithAnnotations
+
+generate entities "http://www.example.org/xbase/entities/Entities"
+
+Model:
+	importSection=XImportSection?
+	entities+=Entity*;
+
+Entity:
+	annotations+=XAnnotation*
+	'entity' name=ID
+	('<' typeParameters+=JvmTypeParameter (',' typeParameters+=JvmTypeParameter)* '>')? 
+	('extends' superType=JvmParameterizedTypeReference)? '{'
+	attributes+=Attribute*
+	operations += Operation*
+	'}';
+
+Attribute:
+	annotations+=XAnnotation*
+	'attr' (extension?='extension')? (type=JvmTypeReference)? name=ID
+	('=' initexpression=XExpression)? ';';
+
+Operation:
+	'op' (type=JvmTypeReference)? name=ID
+	'(' (params+=FullJvmFormalParameter (','
+		params+=FullJvmFormalParameter)*)? ')'
+	body=XBlockExpression;

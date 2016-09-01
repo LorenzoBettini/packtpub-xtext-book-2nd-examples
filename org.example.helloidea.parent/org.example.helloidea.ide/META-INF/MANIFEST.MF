@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.helloidea.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.helloidea.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.example.helloidea,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.helloidea.ide.contentassist.antlr.internal,
+ org.example.helloidea.ide.contentassist.antlr
+

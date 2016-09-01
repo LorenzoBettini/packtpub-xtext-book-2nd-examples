@@ -1,0 +1,20 @@
+module org.example.customgreetings.GenerateGreetingsModel
+
+import org.eclipse.xtext.xtext.generator.*
+import org.eclipse.xtext.xtext.generator.model.project.*
+
+var rootPath = ".."
+var project = "org.example.customgreetings"
+
+Workflow {
+	bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
+		scanClassPath = true
+	}
+	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
+		directory = "${rootPath}/${project}/emf-gen"
+	}
+	component = org.eclipse.emf.mwe2.ecore.EcoreGenerator {
+		genModel = "platform:/resource/${project}/model/custom/Greetings.genmodel"
+		srcPath = "platform:/resource/${project}/src"
+	}
+}

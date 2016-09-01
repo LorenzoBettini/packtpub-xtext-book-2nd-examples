@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="CreateLocalTargetDefinitionFile" basedir="." default="create-target-file" >
+
+	<property name="local.target" value="local.target"/>
+	<property name="orig.target" location="./neon-xtext-2.9.target"/>
+	<property name="local.mirror.path" location="${user.home}/mirror/neon-xtext-2.9-swtbot/final/"/>
+	<property name="local.mirror.url" value="file:${local.mirror.path}"/>
+
+	
+    <target name="copy-target-file" description="Copy the .target definition file into the local.target">
+		<echo message="local.target: ${local.target}" />
+		<echo message="orig.target : ${orig.target}" />
+
+    	<copy file="${orig.target}" tofile="${local.target}" overwrite="true" verbose="true"/>
+    </target>
+
+	
+	<target name="create-target-file" depends="copy-target-file" description="Creates a .target file from the original one, pointing to a local mirror">
+		<echo message="local.mirror.path: ${local.mirror.path}" />
+		<echo message="local.mirror.url : ${local.mirror.url}" />
+		
+		<replaceregexp>
+			<regexp pattern="target name=&quot;(\S+)&quot;(\.*)" />
+			<substitution expression="target name=&quot;local&quot;\2" />
+			<fileset id="path.target" dir=".">
+				<include name="${local.target}" />
+			</fileset>
+		</replaceregexp>
+
+		<replaceregexp byline="true">
+			<regexp pattern="&lt;repository location=&quot;(\S+)&quot;(\.*)/&gt;" />
+			<substitution expression="&lt;repository location=&quot;${local.mirror.url}&quot;\2/&gt;" />
+			<fileset id="path.target" dir=".">
+				<include name="${local.target}" />
+			</fileset>
+		</replaceregexp>
+	</target>
+</project>

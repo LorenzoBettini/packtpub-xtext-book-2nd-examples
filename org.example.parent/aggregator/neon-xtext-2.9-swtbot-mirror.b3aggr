@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/b3/2011/aggregator/1.1.0" description="Mirror for Neon SDK, Xtext 2.9 and SWTBot Target Platform" label="Mirror for Neon SDK, Xtext 2.9 and SWTBot Target Platform" buildRoot="${user.home}/mirror/neon-xtext-2.9-swtbot" packedStrategy="SKIP">
+  <validationSets label="main">
+    <contributions label="Neon RCP">
+      <repositories location="http://download.eclipse.org/releases/neon">
+        <products name="org.eclipse.sdk.ide"/>
+        <features name="org.eclipse.sdk.feature.group"/>
+        <features name="org.eclipse.equinox.executable.feature.group"/>
+        <features name="org.eclipse.emf.sdk.feature.group"/>
+      </repositories>
+    </contributions>
+    <contributions description="Xtext Releases" label="Xtext Releases">
+      <repositories location="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases">
+        <features name="org.eclipse.xtext.sdk.feature.group" versionRange="[2.9.1,2.10.0)"/>
+        <features name="org.eclipse.xtext.redist.feature.group" versionRange="[2.9.1,2.10.0)"/>
+        <features name="org.eclipse.xtext.redist.source.feature.group" versionRange="[2.9.1,2.10.0)"/>
+        <features name="org.eclipse.emf.mwe2.language.sdk.feature.group" versionRange="2.8.3"/>
+        <features name="org.eclipse.emf.mwe2.runtime.sdk.feature.group" versionRange="2.8.3"/>
+        <features name="org.eclipse.emf.mwe2.launcher.feature.group" versionRange="2.8.3"/>
+      </repositories>
+    </contributions>
+    <contributions description="SwtBot" label="SwtBot">
+      <repositories location="http://download.eclipse.org/technology/swtbot/releases/latest">
+        <features name="org.eclipse.swtbot.eclipse.feature.group"/>
+        <features name="org.eclipse.swtbot.ide.feature.group"/>
+      </repositories>
+    </contributions>
+    <contributions description="Itemis Xtext" label="Itemis Xtext">
+      <repositories location="http://download.itemis.com/updates/releases/2.1.1/">
+        <features name="de.itemis.xtext.antlr.feature.feature.group"/>
+      </repositories>
+    </contributions>
+  </validationSets>
+  <configurations/>
+  <configurations architecture="x86_64"/>
+  <configurations operatingSystem="linux" windowSystem="gtk"/>
+  <configurations operatingSystem="linux" windowSystem="gtk" architecture="x86_64"/>
+  <configurations operatingSystem="macosx" windowSystem="cocoa" architecture="x86_64"/>
+  <customCategories identifier="custom.rcp.components" label="Custom RCP Components"/>
+</aggregator:Aggregation>

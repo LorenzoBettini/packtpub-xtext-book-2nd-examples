@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.expressions.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.expressions.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.example.expressions,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.expressions.ide.contentassist.antlr.internal,
+ org.example.expressions.ide.contentassist.antlr
+

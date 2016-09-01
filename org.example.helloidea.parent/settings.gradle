@@ -1,0 +1,4 @@
+include 'org.example.helloidea'
+include 'org.example.helloidea.ide'
+include 'org.example.helloidea.idea'
+include 'org.example.helloidea.tests'

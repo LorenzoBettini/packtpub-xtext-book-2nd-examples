@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Testutils
+Bundle-SymbolicName: org.example.testutils
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Lorenzo Bettini
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ com.google.inject;bundle-version="3.0.0",
+ org.eclipse.xtext.junit4,
+ org.eclipse.xtext.ui,
+ org.eclipse.jdt.core;bundle-version="3.11.0",
+ org.junit;bundle-version="4.12.0",
+ org.eclipse.pde.core;bundle-version="3.10.0"
+Export-Package: org.example.testutils
+

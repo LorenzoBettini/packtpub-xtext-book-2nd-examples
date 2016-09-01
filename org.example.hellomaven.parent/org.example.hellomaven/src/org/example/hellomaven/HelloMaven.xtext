@@ -1,0 +1,9 @@
+grammar org.example.hellomaven.HelloMaven with org.eclipse.xtext.common.Terminals
+
+generate helloMaven "http://www.example.org/hellomaven/HelloMaven"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

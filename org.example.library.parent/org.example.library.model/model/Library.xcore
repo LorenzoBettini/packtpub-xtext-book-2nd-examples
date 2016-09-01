@@ -1,0 +1,38 @@
+@GenModel(
+	// required to generate Java code from Maven
+	modelDirectory="/org.example.library.model/src-gen"
+)
+package org.example.library
+
+class LibraryModel {
+	contains Library[] libraries
+}
+
+abstract class Named {
+	String name
+}
+
+class Library extends Named {
+	contains Writer[] writers
+	contains Book[] books
+}
+
+type Books wraps Iterable<Book>
+
+class Writer extends Named {
+	op Books getBooks() {
+		(eContainer as Library).books.
+			filter[authors.contains(this)]
+	}
+}
+
+class Book {
+	String title
+	refers Writer[] authors
+
+	op String toString() {
+		'title: "' + title + '"' +
+			if (!authors.empty)
+				", by " + authors.map[name].join(", ")
+	}
+}

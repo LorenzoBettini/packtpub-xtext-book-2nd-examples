@@ -1,0 +1,15 @@
+package smalljava.examples;
+
+import smalljava.examples2.*;
+
+class SmallJavaExample {
+	public SmallJavaExample m() {
+		return new SmallJavaExample();
+	}
+	public String sayHello1() {
+		return new AnotherSmallJavaExample().hello(true);
+	}
+	public String sayHello2() {
+		return new AnotherSmallJavaExample().hello(false);
+	}
+}

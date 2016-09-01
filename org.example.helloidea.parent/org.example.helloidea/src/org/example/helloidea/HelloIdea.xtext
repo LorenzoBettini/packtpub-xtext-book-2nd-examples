@@ -1,0 +1,9 @@
+grammar org.example.helloidea.HelloIdea with org.eclipse.xtext.common.Terminals
+
+generate helloIdea "http://www.example.org/helloidea/HelloIdea"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

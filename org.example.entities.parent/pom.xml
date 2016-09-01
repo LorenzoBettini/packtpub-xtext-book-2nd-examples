@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<relativePath>../org.example.parent/pom.xml</relativePath>
+		<groupId>org.example</groupId>
+		<artifactId>org.example.parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>org.example.entities.parent</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>org.example.entities</module>
+		<module>org.example.entities.generatormain.tests</module>
+		<module>org.example.entities.standalone.tests</module>
+		<module>org.example.entities.ide</module>
+		<module>org.example.entities.ui</module>
+		<module>org.example.entities.tests</module>
+		<module>org.example.entities.ui.tests</module>
+	</modules>
+
+</project>

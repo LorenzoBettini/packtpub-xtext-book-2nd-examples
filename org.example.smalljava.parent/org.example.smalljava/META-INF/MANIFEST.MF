@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.smalljava
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.smalljava; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.smalljava,
+ org.example.smalljava.generator,
+ org.example.smalljava.parser.antlr,
+ org.example.smalljava.parser.antlr.internal,
+ org.example.smalljava.scoping,
+ org.example.smalljava.serializer,
+ org.example.smalljava.services,
+ org.example.smalljava.smallJava,
+ org.example.smalljava.smallJava.impl,
+ org.example.smalljava.smallJava.util,
+ org.example.smalljava.typing,
+ org.example.smalljava.validation,
+ smalljava.lang
+Import-Package: org.apache.log4j

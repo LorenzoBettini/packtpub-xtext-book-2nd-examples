@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.helloidea
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.helloidea; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.helloidea.helloIdea,
+ org.example.helloidea.serializer,
+ org.example.helloidea.generator,
+ org.example.helloidea.services,
+ org.example.helloidea.helloIdea.impl,
+ org.example.helloidea,
+ org.example.helloidea.parser.antlr.internal,
+ org.example.helloidea.parser.antlr,
+ org.example.helloidea.scoping,
+ org.example.helloidea.helloIdea.util,
+ org.example.helloidea.validation
+Import-Package: org.apache.log4j

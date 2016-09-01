@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.library.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.library.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.example.library,
+ org.example.library.model,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.library.ide.contentassist.antlr,
+ org.example.library.ide.contentassist.antlr.internal
+

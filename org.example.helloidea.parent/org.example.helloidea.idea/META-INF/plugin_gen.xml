@@ -1,0 +1,93 @@
+<idea-plugin version="2">
+	<extensions defaultExtensionNs="org.eclipse.xtext.idea">
+		<package
+			uri="http://www.example.org/helloidea/HelloIdea"
+			class="org.example.helloidea.helloIdea.HelloIdeaPackage"
+		/>
+		<resourceFactory 
+			type="helloidea"
+			class="org.eclipse.xtext.resource.IResourceFactory"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+		/>
+		<resourceServiceProvider
+			uriExtension="helloidea"
+			class="org.eclipse.xtext.idea.resource.IResourceIdeaServiceProvider"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+		/>
+
+		<lang.setup
+			language="org.example.helloidea.HelloIdea"
+			implementationClass="org.example.helloidea.idea.HelloIdeaIdeaSetup"
+		/>
+	</extensions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<psi.treeChangePreprocessor implementation="org.example.helloidea.idea.lang.psi.HelloIdeaCodeBlockModificationListener"/>
+
+		<fileTypeFactory implementation="org.example.helloidea.idea.lang.HelloIdeaFileTypeFactory"/>
+		<stubElementTypeHolder class="org.example.helloidea.idea.lang.HelloIdeaElementTypeProvider"/>
+		<lang.ast.factory 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.lang.BaseXtextASTFactory"
+		/>
+		<lang.parserDefinition 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="org.example.helloidea.idea.lang.parser.HelloIdeaParserDefinition"
+		/>
+		<lang.findUsagesProvider 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.findusages.BaseXtextFindUsageProvider"
+		/>
+		<lang.refactoringSupport 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.refactoring.BaseXtextRefactoringSupportProvider"
+		/>
+		<lang.namesValidator 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="com.intellij.lang.refactoring.NamesValidator"
+		/>
+		<lang.syntaxHighlighterFactory key="org.example.helloidea.HelloIdea" implementationClass="org.example.helloidea.idea.highlighting.HelloIdeaSyntaxHighlighterFactory" />
+		<lang.braceMatcher 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="com.intellij.lang.PairedBraceMatcher"
+		/>
+		<annotator 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.annotation.IssueAnnotator"
+		/>
+		<completion.contributor language="org.example.helloidea.HelloIdea" implementationClass="org.example.helloidea.idea.completion.HelloIdeaCompletionContributor"/>
+		<pom.declarationSearcher implementation="org.example.helloidea.idea.lang.pom.HelloIdeaPomDeclarationSearcher"/>
+
+		<lang.psiStructureViewFactory 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="com.intellij.lang.PsiStructureViewFactory"
+		/>
+		<facetType implementation="org.example.helloidea.idea.facet.HelloIdeaFacetType"/>
+		<lang.documentationProvider 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.documentation.IdeaDocumentationProvider"
+		/>
+		<colorSettingsPage implementation="org.example.helloidea.idea.highlighting.HelloIdeaColorSettingsPage"/>
+		<highlightVisitor implementation="org.example.helloidea.idea.highlighting.HelloIdeaSemanticHighlightVisitor"/>
+
+		<lang.formatter 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="com.intellij.formatting.FormattingModelBuilder"
+		/>
+		<lang.commenter 
+			language="org.example.helloidea.HelloIdea"
+			factoryClass="org.example.helloidea.idea.HelloIdeaExtensionFactory"
+			implementationClass="com.intellij.lang.CodeDocumentationAwareCommenter"
+		/>
+	</extensions>
+</idea-plugin>

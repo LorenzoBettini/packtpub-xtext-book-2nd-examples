@@ -1,0 +1,21 @@
+package smalljava.lang;
+
+class Object {
+  public Object clone() {
+    return this;
+  }
+
+  public String toString() {
+    // fake implementation
+    return "not implemented";
+  }
+
+  public Boolean equals(Object o) {
+    // fake implementation
+    return false;
+  }
+}
+
+class String extends Object {}
+class Integer extends Object {}
+class Boolean extends Object {}

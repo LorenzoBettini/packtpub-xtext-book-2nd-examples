@@ -1,0 +1,14 @@
+entity MyEntity {}
+
+entity MyBaseEntity {
+    MyEntity[] arrayAttr;
+    MyEntity[10] arrayAttrWithDimension;
+    MyEntity notArrayAttr;
+    string stringAttr;
+    boolean booleanAttr;
+    int[] intArrayAttr;
+}
+
+entity MyDerivedEntity extends MyBaseEntity {
+    MyEntity attribute;
+}

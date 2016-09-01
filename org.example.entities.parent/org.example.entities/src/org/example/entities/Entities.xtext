@@ -1,0 +1,26 @@
+grammar org.example.entities.Entities with org.eclipse.xtext.common.Terminals
+
+generate entities "http://www.example.org/entities/Entities"
+
+Model:
+	entities+=Entity*;
+
+Entity:
+	'entity' name=ID ('extends' superType=[Entity])? '{'
+		attributes+=Attribute*
+	'}';
+
+Attribute:
+	type=AttributeType name=ID ';';
+
+AttributeType:
+	elementType=ElementType (array?='[' (length=INT)? ']')?;
+
+ElementType:
+	BasicType | EntityType;
+
+BasicType:
+	typeName=('string' | 'int' | 'boolean');
+
+EntityType:
+	entity=[Entity];
