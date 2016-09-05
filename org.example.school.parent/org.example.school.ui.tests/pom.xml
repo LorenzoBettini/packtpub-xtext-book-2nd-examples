@@ -22,7 +22,6 @@
 				<configuration>
 					<failIfNoTests>false</failIfNoTests>
 					<useUIHarness>true</useUIHarness>
-					<argLine>-DbuildingWithTycho=true</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
