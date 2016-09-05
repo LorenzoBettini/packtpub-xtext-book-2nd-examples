@@ -22,7 +22,7 @@
 				<configuration>
 					<failIfNoTests>false</failIfNoTests>
 					<useUIHarness>true</useUIHarness>
-					<argLine>-DbuildingWithTycho=true</argLine>
+					<argLine>${tycho.testArgLine} -DbuildingWithTycho=true</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
