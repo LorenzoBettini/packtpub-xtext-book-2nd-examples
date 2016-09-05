@@ -12,3 +12,5 @@ Getting Sources
 
 While you can simply clone this git repository and import the projects in Eclipse,
 we strongly suggest you use the automatic procedure described in [GETTINGSOURCES](docs/GETTINGSOURCES.md).
+
+[![Build Status](https://travis-ci.org/LorenzoBettini/packtpub-xtext-book-2nd-examples.svg?branch=master)](https://travis-ci.org/LorenzoBettini/packtpub-xtext-book-2nd-examples)
