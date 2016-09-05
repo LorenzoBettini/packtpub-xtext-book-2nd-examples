@@ -9,6 +9,10 @@
 	<artifactId>org.example.smalljava.ui.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 
+	<properties>
+		<tycho.testArgLine></tycho.testArgLine>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
