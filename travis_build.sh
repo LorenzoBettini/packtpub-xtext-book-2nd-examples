@@ -7,7 +7,7 @@ if [ "$TRAVIS_OS_NAME" == "osx" ]; then
 		mvn -f org.example.parent/pom.xml clean verify
 	else
 		echo "Skipping build on MacOSX for standard commit"
-		mvn -f org.example.parent/pom.xml clean verify
+		#mvn -f org.example.parent/pom.xml clean verify
 	fi
 else
 	echo "Build on Linux"
