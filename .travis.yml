@@ -1,0 +1,31 @@
+sudo: false
+
+language: java
+
+matrix:
+  fast_finish: true
+  include:
+    - os: linux
+      jdk: oraclejdk8
+      env: DISPLAY=:99.0
+    - os: osx
+      osx_image: xcode8
+
+cache:
+  directories:
+  - $HOME/.m2
+
+install: true
+
+before_install:
+ - echo "MAVEN_OPTS='-Xmx2048m -XX:MaxPermSize=512m'" > ~/.mavenrc
+ - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export JAVA_HOME=$(/usr/libexec/java_home); fi
+ - echo $JAVA_HOME
+
+before_script:
+ - sh -e ./before_script.sh
+
+# Build on MacOSX is triggered only for pull requests
+script:
+ - export
+ - bash -e ./travis_build.sh
