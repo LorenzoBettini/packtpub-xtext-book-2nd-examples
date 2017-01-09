@@ -259,30 +259,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
-        id="p2.org.eclipse.xtext"
-        label="Xtext Releases"
-        licenseConfirmationDisabled="true">
-      <requirement
-          name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.10.0,2.11.0)"/>
-      <requirement
-          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
-      <requirement
-          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
-      <requirement
-          name="de.itemis.xtext.antlr.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.emf.ecore.xcore.sdk.feature.group"/>
-      <repository
-          url="${xtext.site}"/>
-      <repository
-          url="${mwe2.site}"/>
-      <repository
-          url="http://download.itemis.com/updates/releases/2.1.1/"/>
-      <description>Xtext &amp; Xtend</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
         id="p2.swtbot"
         label="SWTBot"
         licenseConfirmationDisabled="true">
@@ -342,9 +318,6 @@
           name="org.eclipse.sdk.feature.group"/>
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
-      <requirement
-          name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.10.0,2.11.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
@@ -648,7 +621,86 @@
     <description>Final Clean Build</description>
   </setupTask>
   <stream name="master"
-      label="Master"/>
+      label="Master">
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        id="p2.org.eclipse.xtext.2.10"
+        label="Xtext Releases"
+        licenseConfirmationDisabled="true">
+      <requirement
+          name="org.eclipse.xtext.sdk.feature.group"
+          versionRange="[2.10.0,2.11.0)"/>
+      <requirement
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
+      <requirement
+          name="de.itemis.xtext.antlr.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.ecore.xcore.sdk.feature.group"/>
+      <repository
+          url="${xtext.site}"/>
+      <repository
+          url="${mwe2.site}"/>
+      <repository
+          url="http://download.itemis.com/updates/releases/2.1.1/"/>
+      <description>Xtext &amp; Xtend</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.targlets:TargletTask">
+      <targlet
+          name="Xtext">
+        <requirement
+            name="org.eclipse.xtext.sdk.feature.group"
+            versionRange="[2.10.0,2.11.0)"/>
+      </targlet>
+    </setupTask>
+  </stream>
+  <stream name="xtext-2.11"
+      label="Xtext 2.11">
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="mwe2.site"
+        value="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/latest/"/>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="xtext.site"
+        value="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/latest/"
+        defaultValue=""/>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        id="p2.org.eclipse.xtext.2.11"
+        label="Xtext Releases"
+        licenseConfirmationDisabled="true">
+      <requirement
+          name="org.eclipse.xtext.sdk.feature.group"
+          versionRange="[2.11.0,2.12.0)"/>
+      <requirement
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
+      <requirement
+          name="de.itemis.xtext.antlr.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.emf.ecore.xcore.sdk.feature.group"/>
+      <repository
+          url="${xtext.site}"/>
+      <repository
+          url="${mwe2.site}"/>
+      <repository
+          url="http://download.itemis.com/updates/releases/2.1.1/"/>
+      <description>Xtext &amp; Xtend</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.targlets:TargletTask">
+      <targlet
+          name="Xtext">
+        <requirement
+            name="org.eclipse.xtext.sdk.feature.group"
+            versionRange="[2.11.0,2.12.0)"/>
+      </targlet>
+    </setupTask>
+  </stream>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
