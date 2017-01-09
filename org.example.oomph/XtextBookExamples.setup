@@ -65,7 +65,6 @@
       name="org.eclipse.debug.ui">
     <setupTask
         xsi:type="setup:PreferenceTask"
-        id=""
         key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.cancel_launch_with_compile_errors"
         value="always"/>
   </setupTask>
@@ -550,7 +549,7 @@
   </setupTask>
   <setupTask
       xsi:type="projects:ProjectsBuildTask"
-      id="Initial Build"
+      id="InitialBuild"
       refresh="true">
     <description>Initial Build</description>
   </setupTask>
@@ -578,7 +577,7 @@
   </setupTask>
   <setupTask
       xsi:type="projects:ProjectsBuildTask"
-      id="Build Gradle project parent"
+      id="BuildGradleProjectParent"
       refresh="true">
     <description>Build for Gradle parent imported project</description>
   </setupTask>
@@ -595,7 +594,7 @@
   </setupTask>
   <setupTask
       xsi:type="projects:ProjectsBuildTask"
-      id="Another build"
+      id="AnotherBuild"
       refresh="true">
     <description>Build for Imported projects</description>
   </setupTask>
@@ -609,7 +608,7 @@
       launcher="EntitiesGeneratorMain"/>
   <setupTask
       xsi:type="projects:ProjectsBuildTask"
-      id="Another Intermediate build"
+      id="AnotherIntermediateBuild"
       refresh="true">
     <description>Build for running generator.Main of SmallJava</description>
   </setupTask>
@@ -643,9 +642,11 @@
       launcher="GenerateLibrary.mwe2"/>
   <setupTask
       xsi:type="projects:ProjectsBuildTask"
-      id="Clean Build"
+      id="CleanBuild"
       refresh="true"
-      clean="true"/>
+      clean="true">
+    <description>Final Clean Build</description>
+  </setupTask>
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer
