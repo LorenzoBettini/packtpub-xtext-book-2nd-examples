@@ -17,6 +17,10 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import feature="org.eclipse.xtext.sdk" version="2.11.0" match="equivalent"/>
+   </requires>
+
    <plugin
          id="org.example.entities.ui.tests"
          download-size="0"
