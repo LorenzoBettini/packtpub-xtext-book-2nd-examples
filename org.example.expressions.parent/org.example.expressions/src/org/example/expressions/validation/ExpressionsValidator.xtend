@@ -98,7 +98,7 @@ class ExpressionsValidator extends AbstractExpressionsValidator {
 	}
 
 	def private checkExpectedSame(ExpressionsType left, ExpressionsType right) {
-		if (right != null && left != null && right != left) {
+		if (right !== null && left !== null && right != left) {
 			error("expected the same type, but was " + left + ", " + right,
 				ExpressionsPackage.Literals.EQUALITY.getEIDAttribute(), TYPE_MISMATCH)
 		}
@@ -128,7 +128,7 @@ class ExpressionsValidator extends AbstractExpressionsValidator {
 
 	def private ExpressionsType getTypeAndCheckNotNull(Expression exp, EReference reference) {
 		val type = exp?.typeFor
-		if (type == null)
+		if (type === null)
 			error("null type", reference, TYPE_MISMATCH)
 		return type;
 	}

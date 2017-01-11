@@ -1,8 +1,8 @@
 package org.example.expressions.performance.tests
 
 import com.google.inject.Inject
-import org.eclipse.xtext.junit4.util.ParseHelper
-import org.eclipse.xtext.junit4.validation.ValidationTestHelper
+import org.eclipse.xtext.testing.util.ParseHelper
+import org.eclipse.xtext.testing.validation.ValidationTestHelper
 import org.example.expressions.expressions.ExpressionsModel
 
 abstract class AbstractExpressionsPerformanceTest {

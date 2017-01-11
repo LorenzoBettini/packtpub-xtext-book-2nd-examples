@@ -1,7 +1,7 @@
 package org.example.expressions.performance.tests
 
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
 import org.example.expressions.tests.ExpressionsInjectorProvider
 import org.junit.FixMethodOrder
 import org.junit.Test

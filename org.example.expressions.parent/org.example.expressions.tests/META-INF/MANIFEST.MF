@@ -7,12 +7,12 @@ Bundle-SymbolicName: org.example.expressions.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.example.expressions,
  org.junit;bundle-version="4.7.0",
- org.eclipse.xtext.junit4,
- org.eclipse.xtext.xbase.junit,
+ org.eclipse.xtext.xbase.testing,
  org.eclipse.xtext.xbase.lib,
- org.eclipse.jdt.core;bundle-version="3.12.0"
+ org.eclipse.jdt.core;bundle-version="3.12.0",
+ org.eclipse.xtext.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.expressions.tests
+Export-Package: org.example.expressions.tests;x-internal=true
 Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
  org.junit.runners.model;version="4.5.0",
