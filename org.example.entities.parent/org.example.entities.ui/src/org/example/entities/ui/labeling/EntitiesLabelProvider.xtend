@@ -24,7 +24,7 @@ class EntitiesLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	def text(Attribute a) {
-		a.name + if (a.type != null)
+		a.name + if (a.type !== null)
 			" : " + a.type.representation
 		else
 			""

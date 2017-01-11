@@ -19,11 +19,11 @@ class EntitiesValidator extends AbstractEntitiesValidator {
 
 	@Check
 	def checkNoCycleInEntityHierarchy(Entity entity) {
-		if (entity.superType == null)
+		if (entity.superType === null)
 			return // nothing to check
 		val visitedEntities = newHashSet(entity)
 		var current = entity.superType
-		while (current != null) {
+		while (current !== null) {
 			if (visitedEntities.contains(current)) {
 				error("cycle in hierarchy of entity '" + current.name + "'",
 					EntitiesPackage.eINSTANCE.entity_SuperType,
