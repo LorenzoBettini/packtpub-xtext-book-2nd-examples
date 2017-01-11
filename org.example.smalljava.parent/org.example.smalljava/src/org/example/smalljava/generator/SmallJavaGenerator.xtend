@@ -43,7 +43,7 @@ class SmallJavaGenerator extends AbstractGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val program = resource.allContents.toIterable.filter(SJProgram).head
 		// an empty program is a valid SmallJava program
-		if (program == null)
+		if (program === null)
 			return;
 		// don't compile the classes of the SmallJava library
 		if (program.name == "smalljava.lang")
@@ -52,11 +52,11 @@ class SmallJavaGenerator extends AbstractGenerator {
 			fsa.generateFile
 				(smallJavaClass.fullyQualifiedName.toString.replace(".", "/") + ".java",
 				'''
-				«IF program.name != null»
+				«IF program.name !== null»
 				package «program.name»;
 				
 				«ENDIF»
-				public class «smallJavaClass.name» «IF smallJavaClass.superclass != null»extends «smallJavaClass.superclass.compileTypeReference» «ENDIF»{
+				public class «smallJavaClass.name» «IF smallJavaClass.superclass !== null»extends «smallJavaClass.superclass.compileTypeReference» «ENDIF»{
 					«FOR field : smallJavaClass.fields»
 					«field.access» «field.type.compileTypeReference» «field.name»;
 					«ENDFOR»
@@ -99,7 +99,7 @@ class SmallJavaGenerator extends AbstractGenerator {
 			SJIfStatement: '''
 			if («s.expression.compileExpression»)
 				«s.thenBlock.compileBlock»
-			«IF s.elseBlock != null»
+			«IF s.elseBlock !== null»
 			else
 				«s.elseBlock.compileBlock»
 			«ENDIF»

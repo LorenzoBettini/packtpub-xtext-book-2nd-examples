@@ -13,9 +13,10 @@ Require-Bundle: org.example.smalljava.ui,
  org.eclipse.ui.workbench;resolution:=optional,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.jdt.core;bundle-version="3.12.0",
- org.example.testutils
+ org.example.testutils,
+ org.eclipse.xtext.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.smalljava.ui.tests
+Export-Package: org.example.smalljava.ui.tests;x-internal=true
 Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
  org.junit.runners.model;version="4.5.0",

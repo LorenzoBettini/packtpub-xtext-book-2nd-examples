@@ -5,12 +5,12 @@ package org.example.smalljava.tests
 
 import com.google.inject.Inject
 import org.eclipse.xtext.diagnostics.Severity
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.TemporaryFolder
-import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
-import org.eclipse.xtext.xbase.compiler.CompilationTestHelper.Result
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
 import org.eclipse.xtext.xbase.lib.util.ReflectExtensions
+import org.eclipse.xtext.xbase.testing.CompilationTestHelper
+import org.eclipse.xtext.xbase.testing.CompilationTestHelper.Result
+import org.eclipse.xtext.xbase.testing.TemporaryFolder
 import org.example.smalljava.SmallJavaLib
 import org.junit.Rule
 import org.junit.Test

@@ -25,7 +25,7 @@ class SmallJavaImportedNamespaceAwareLocalScopeProvider extends ImportedNamespac
 		if (context instanceof SJProgram) {
 			val fqn = context.fullyQualifiedName
 			// fqn is the package of this program
-			if (fqn != null) {
+			if (fqn !== null) {
 				// all the external classes with the same package of this program
 				// will be automatically visible in this program, without an import
 				resolvers += new ImportNormalizer(

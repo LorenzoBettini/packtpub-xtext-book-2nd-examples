@@ -63,7 +63,7 @@ class SmallJavaTypeComputer {
 	}
 
 	def isPrimitive(SJClass c) {
-		c.eResource == null
+		c.eResource === null
 	}
 
 	def expectedType(SJExpression e) {

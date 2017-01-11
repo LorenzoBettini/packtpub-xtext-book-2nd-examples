@@ -1,12 +1,13 @@
 package org.example.smalljava.tests
 
 import com.google.inject.Inject
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.junit4.util.ParseHelper
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.util.ParseHelper
 import org.example.smalljava.SmallJavaModelUtil
 import org.example.smalljava.smallJava.SJAssignment
 import org.example.smalljava.smallJava.SJExpression
+import org.example.smalljava.smallJava.SJIfStatement
 import org.example.smalljava.smallJava.SJMemberSelection
 import org.example.smalljava.smallJava.SJProgram
 import org.example.smalljava.smallJava.SJReturn
@@ -17,7 +18,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import static extension org.junit.Assert.*
-import org.example.smalljava.smallJava.SJIfStatement
 
 @RunWith(XtextRunner)
 @InjectWith(SmallJavaInjectorProvider)

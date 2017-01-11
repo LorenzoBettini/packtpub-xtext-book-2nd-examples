@@ -32,7 +32,7 @@ class SmallJavaLib {
 
 	def getSmallJavaObjectClass(EObject context) {
 		val desc = context.getVisibleClassesDescriptions.findFirst[qualifiedName.toString == LIB_OBJECT]
-		if (desc == null)
+		if (desc === null)
 			return null
 		var o = desc.EObjectOrProxy
 		if (o.eIsProxy)
