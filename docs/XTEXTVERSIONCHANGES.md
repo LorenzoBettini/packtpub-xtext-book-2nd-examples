@@ -6,6 +6,21 @@ In the following we detail the changes required to adapt the examples to the new
 
 ## Xtext 2.11
 
+### Grammar language
+
+The grammar language now supports Java-like annotations; for the moment the annotation `@Override` should be added when you redefine a rule from the parent grammar.  You will get a warning in the editor and a quickfix to add the missing annotation.
+
+For example, in the **Xbase Expressions DSL** the redefined rule should become:
+
+```
+@Override 
+XPrimaryExpression returns XExpression:
+	{EvalExpression} 'eval' expression=XExpression |
+	super;
+```
+
+### Testing
+
 Many classes from the bundle `org.eclipse.xtext.junit4` have been deprecated: you should now use `org.eclipse.xtext.testing`, which basically provides the same classes, but with with the package `org.eclipse.xtext.testing` instead of `org.eclipse.xtext.junit4`.  The same holds for most classes in `org.eclipse.xtext.xbase.junit`, you should now use the ones from `org.eclipse.xtext.xbase.testing`.
  
 Running the mwe2 generator will add the new bundles as dependencies (**TODO** : check status of <https://github.com/eclipse/xtext-core/pull/232>), but you will have to remove the old ones manually from the MANIFEST.MF.  Moreover, the generated injector providers for tests are based on the new bundle, so you will need to manually modify your test cases so that they import and use the new packages (once you removed the old bundle from the dependencies, an "Organize Imports" should automatically fix the imports; if not, please remove manually the old imports and perform an "Organize Imports").
