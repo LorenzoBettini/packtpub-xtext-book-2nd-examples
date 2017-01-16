@@ -7,11 +7,11 @@ import com.google.inject.Inject
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import org.eclipse.xtext.diagnostics.Severity
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.TemporaryFolder
-import org.eclipse.xtext.junit4.XtextRunner
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper.Result
+import org.eclipse.xtext.xbase.testing.TemporaryFolder
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -217,8 +217,7 @@ class ExpressionsCompilerTest{
 				    int i = 0;
 				    while ((!(args[i]).isEmpty())) {
 				      int _plusPlus = i++;
-				      String _get = args[_plusPlus];
-				      InputOutput.<String>println(_get);
+				      InputOutput.<String>println(args[_plusPlus]);
 				    }
 				  }
 				}
@@ -249,8 +248,7 @@ class ExpressionsCompilerTest{
 				    int i = 0;
 				    while (((i < a.size()) && (!("" + a.get(i)).isEmpty()))) {
 				      int _plusPlus = i++;
-				      Integer _get = a.get(_plusPlus);
-				      InputOutput.<Integer>println(_get);
+				      InputOutput.<Integer>println(a.get(_plusPlus));
 				    }
 				  }
 				}
@@ -352,8 +350,7 @@ class ExpressionsCompilerTest{
 				    int i = 0;
 				    while ((!args[i].isEmpty())) {
 				      int _plusPlus = i++;
-				      String _get = args[_plusPlus];
-				      InputOutput.<String>println(_get);
+				      InputOutput.<String>println(args[_plusPlus]);
 				    }
 				  }
 				}
