@@ -33,6 +33,23 @@ Similar adaptions will have to be performed also in the `.ui.tests` project.  Ho
 
 Xtend now has a warning of the shape `The operator '!=' should be replaced by '!==' when null is one of the arguments.`, the same holds for `==` and `===`, suggesting to use actual reference equality check instead of '!=' or `==` (which in Xtend is translated into a call of `equals` method).
 
+### Xbase
+
+The Xbase compiler has been optimized in order to reduce the numbers of additional synthetic variables that are generated.  The compilation tests will have to be adapted, in case you were comparing the result of the compilation with an expected result.
+
+For example, instead of Java code of the shape
+
+```Java
+Integer _get = a.get(_plusPlus);
+InputOutput.<Integer>println(_get);
+```
+
+The Xbase compile now generates:
+
+```Java
+InputOutput.<Integer>println(a.get(_plusPlus));
+```
+
 ### Maven build
 
 The mwe2.launch version in the `pom.xml` used in the main project for running MWE2 during the Maven build should be updated from 2.8.3 to at least 2.9.0:
