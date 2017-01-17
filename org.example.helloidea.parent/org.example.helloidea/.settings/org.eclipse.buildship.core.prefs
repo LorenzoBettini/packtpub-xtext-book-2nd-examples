@@ -1,3 +1,4 @@
+build.commands=org.eclipse.jdt.core.javabuilder,org.eclipse.xtext.ui.shared.xtextBuilder
 connection.arguments=
 connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
 connection.java.home=null
@@ -5,4 +6,5 @@ connection.jvm.arguments=
 connection.project.dir=..
 derived.resources=.gradle,build
 eclipse.preferences.version=1
+natures=org.eclipse.jdt.core.javanature,org.eclipse.xtext.ui.shared.xtextNature
 project.path=\:org.example.helloidea
