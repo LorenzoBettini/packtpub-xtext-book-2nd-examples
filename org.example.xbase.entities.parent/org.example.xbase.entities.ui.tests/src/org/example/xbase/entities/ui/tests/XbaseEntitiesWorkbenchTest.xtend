@@ -1,9 +1,9 @@
 package org.example.xbase.entities.ui.tests
 
 import com.google.inject.Inject
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.junit4.ui.AbstractWorkbenchTest
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
 import org.example.testutils.EclipseTestUtils
 import org.example.testutils.PDETargetPlatformUtils
 import org.junit.Before

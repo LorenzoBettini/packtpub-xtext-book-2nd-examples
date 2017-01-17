@@ -55,7 +55,7 @@ class EntitiesJvmModelInferrer extends AbstractModelInferrer {
 		acceptor.accept(entity.toClass("entities." + entity.name)) [
 			copyTypeParameters(entity.typeParameters)
 			documentation = entity.documentation
-			if (entity.superType != null)
+			if (entity.superType !== null)
 				superTypes += entity.superType.cloneWithProxies
 			translateAnnotations(entity.annotations)
 			for (a : entity.attributes) {
@@ -66,7 +66,7 @@ class EntitiesJvmModelInferrer extends AbstractModelInferrer {
 					}
 					translateAnnotations(a.annotations)
 					documentation = a.documentation
-					if (a.initexpression != null)
+					if (a.initexpression !== null)
 						initializer = a.initexpression
 				]
 				members += a.toGetter(a.name, type)
@@ -95,7 +95,7 @@ class EntitiesJvmModelInferrer extends AbstractModelInferrer {
 	}
 
 	def private void translateAnnotations(JvmAnnotationTarget target, Iterable<XAnnotation> annotations) {
-		target.addAnnotations(annotations.filterNull.filter[annotationType != null])
+		target.addAnnotations(annotations.filterNull.filter[annotationType !== null])
 	}
 
 	def private void copyTypeParameters(JvmTypeParameterDeclarator target, List<JvmTypeParameter> typeParameters) {

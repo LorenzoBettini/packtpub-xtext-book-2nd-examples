@@ -54,7 +54,7 @@ class EntitiesFormatter extends XbaseWithAnnotationsFormatter {
 		}
 		for (operation : entity.getOperations()) {
 			operation.regionFor.keyword("op").append[oneSpace]
-			if (operation.type != null) {
+			if (operation.type !== null) {
 				operation.type.append[oneSpace]
 				operation.type.format
 			}
