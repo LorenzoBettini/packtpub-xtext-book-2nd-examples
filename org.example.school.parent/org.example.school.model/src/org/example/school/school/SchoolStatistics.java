@@ -87,7 +87,7 @@ public interface SchoolStatistics extends EObject {
 	 * @return the value of the '<em>Students With No Teacher</em>' attribute.
 	 * @see #setStudentsWithNoTeacher(Iterable)
 	 * @see org.example.school.school.SchoolPackage#getSchoolStatistics_StudentsWithNoTeacher()
-	 * @model dataType="org.example.school.school.Iterable<org.example.school.school.Student>"
+	 * @model dataType="org.example.school.school.Iterable&lt;org.example.school.school.Student&gt;"
 	 * @generated
 	 */
 	Iterable<Student> getStudentsWithNoTeacher();
