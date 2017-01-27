@@ -16,7 +16,7 @@
 
 		<memoryArgs>-Xms256M -Xmx1024M -XX:+HeapDumpOnOutOfMemoryError</memoryArgs>
 
-		<target-file-name>neon-xtext-latest</target-file-name>
+		<target-file-name>neon-xtext-milestones</target-file-name>
 	</properties>
 
 	<modules>
