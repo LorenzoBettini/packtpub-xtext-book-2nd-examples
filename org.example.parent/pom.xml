@@ -8,7 +8,7 @@
 
 	<properties>
 		<tycho-version>0.25.0</tycho-version>
-		<xtextVersion>2.11.0-SNAPSHOT</xtextVersion>
+		<xtextVersion>2.11.0.RC2</xtextVersion>
 		<mwe2Version>[2.9.0,2.10)</mwe2Version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
