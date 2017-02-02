@@ -104,7 +104,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="mwe2.site"
-      value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.8.3/"/>
+      value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.9.0/"/>
   <setupTask
       xsi:type="setup:VariableTask"
       name="xtext.site"
@@ -659,11 +659,11 @@
     <setupTask
         xsi:type="setup:VariableTask"
         name="mwe2.site"
-        value="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/milestones"/>
+        value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.9.0/"/>
     <setupTask
         xsi:type="setup:VariableTask"
         name="xtext.site"
-        value="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/milestones"
+        value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"
         defaultValue=""/>
     <setupTask
         xsi:type="setup.p2:P2Task"
