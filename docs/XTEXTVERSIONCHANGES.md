@@ -197,7 +197,7 @@ The Maven dependencies in the pom.xml should be updated to newer versions, e.g.,
 
 The `WebRoot/index.html` must be adapted to the new versions of used dependencies.  The easiest thing to do is to remove that file and have MWE2 regenerate it.
 
-### IntelliJ support
+### IntelliJ support (ATTENTION)
 
 Currently, Xtext 2.11 for the IntelliJ support has not been released yet.  If you want to try Xtext support for IntelliJ you need to stick with Xtext 2.10.0.
 
