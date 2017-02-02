@@ -44,7 +44,7 @@
 				<module>../org.example.school.parent</module>
 				<module>../org.example.library.parent</module>
 				<module>../org.example.customgreetings.parent</module>
-				<module>../org.example.helloidea.parent</module>
+<!-- 				<module>../org.example.helloidea.parent</module> -->
 			</modules>
 		</profile>
 		<!-- build only the Entities DSL -->
