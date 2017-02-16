@@ -32,13 +32,13 @@ class SmallJavaModelUtil {
 		val visited = newLinkedHashSet()
 
 		var current = c.superclass
-		while (current != null && !visited.contains(current)) {
+		while (current !== null && !visited.contains(current)) {
 			visited.add(current)
 			current = current.superclass
 		}
 
 		val object = c.getSmallJavaObjectClass
-		if (object != null)
+		if (object !== null)
 			visited.add(object)
 
 		visited

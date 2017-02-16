@@ -19,7 +19,7 @@ class XtendSwitch {
 	def switchExample(Entity e, Entity specialEntity) {
 		switch e {
 			case e.name.length > 0: "has a name"
-			case e.superType != null: "has a super type"
+			case e.superType !== null: "has a super type"
 			case specialEntity: "special entity"
 			default: ""
 		}

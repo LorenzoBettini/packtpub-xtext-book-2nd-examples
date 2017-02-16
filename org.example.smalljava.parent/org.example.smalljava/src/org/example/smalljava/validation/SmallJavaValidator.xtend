@@ -99,7 +99,7 @@ class SmallJavaValidator extends AbstractSmallJavaValidator {
 
 	@Check
 	def void checkMethodEndsWithReturn(SJMethod method) {
-		if (method.returnStatement == null) {
+		if (method.returnStatement === null) {
 			error("Method must end with a return statement",
 				SmallJavaPackage.eINSTANCE.SJMethod_Body,
 				MISSING_FINAL_RETURN
@@ -124,7 +124,7 @@ class SmallJavaValidator extends AbstractSmallJavaValidator {
 	@Check def void checkConformance(SJExpression exp) {
 		val actualType = exp.typeFor
 		val expectedType = exp.expectedType
-		if (expectedType == null || actualType == null)
+		if (expectedType === null || actualType === null)
 			return; // nothing to check
 		if (!actualType.isConformant(expectedType)) {
 			error("Incompatible types. Expected '" + expectedType.name + "' but was '" + actualType.name + "'",
@@ -147,7 +147,7 @@ class SmallJavaValidator extends AbstractSmallJavaValidator {
 
 		for (m : c.methods) {
 			val overridden = hierarchyMethods.get(m.name)
-			if (overridden != null &&
+			if (overridden !== null &&
 				(!m.type.isConformant(overridden.type) ||
 				!m.params.map[type].elementsEqual(overridden.params.map[type]))) {
 				error("The method '" + m.name + "' must override a superclass method",
@@ -164,7 +164,7 @@ class SmallJavaValidator extends AbstractSmallJavaValidator {
 
 	@Check def void checkAccessibility(SJMemberSelection sel) {
 		val member = sel.member
-		if (member.name != null && !member.isAccessibleFrom(sel))
+		if (member.name !== null && !member.isAccessibleFrom(sel))
 			error(
 				'''The «member.access» member «member.name» is not accessible here''',
 				SmallJavaPackage.eINSTANCE.SJMemberSelection_Member,

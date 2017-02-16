@@ -68,7 +68,7 @@ public interface School extends Named {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.example.school.school.Iterable<org.example.school.school.Student>"
+	 * @model kind="operation" dataType="org.example.school.school.Iterable&lt;org.example.school.school.Student&gt;"
 	 * @generated
 	 */
 	Iterable<Student> getStudents();
@@ -76,7 +76,7 @@ public interface School extends Named {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.example.school.school.Iterable<org.example.school.school.Teacher>"
+	 * @model kind="operation" dataType="org.example.school.school.Iterable&lt;org.example.school.school.Teacher&gt;"
 	 * @generated
 	 */
 	Iterable<Teacher> getTeachers();

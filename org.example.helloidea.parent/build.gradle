@@ -3,18 +3,15 @@ buildscript {
 		jcenter()
 	}
 	dependencies {
-		classpath 'org.xtext:xtext-gradle-plugin:1.0.2'
-		classpath 'org.xtext:xtext-idea-gradle-plugin:1.0.2'
+		classpath 'org.xtext:xtext-gradle-plugin:1.0.15'
+		classpath 'org.xtext:xtext-idea-gradle-plugin:1.0.15'
 	}
 }
 
 subprojects {
-	ext.xtextVersion = '2.10.0'
+	ext.xtextVersion = '2.11.0'
 	repositories {
 		jcenter()
-		maven {
-			url 'https://oss.sonatype.org/content/repositories/snapshots'
-		}
 	}
 	
 	apply plugin: 'java'

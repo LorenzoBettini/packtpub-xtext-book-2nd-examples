@@ -28,6 +28,32 @@
 					<useUIHarness>true</useUIHarness>
 					<argLine>${tycho.testArgLine} -DbuildingWithTycho=true</argLine>
 				</configuration>
+				<executions>
+					<execution>
+						<id>project-wizard-tests</id>
+						<phase>integration-test</phase>
+						<configuration>
+							<includes>
+								<include>**/*NewProjectWizardTest*.java</include>
+							</includes>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-test</id>
+						<phase>integration-test</phase>
+						<configuration>
+							<excludes>
+								<exclude>**/*NewProjectWizardTest*.java</exclude>
+							</excludes>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>

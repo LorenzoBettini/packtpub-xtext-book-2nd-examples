@@ -5,15 +5,15 @@ package org.example.school.tests
 
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.EClass
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.junit4.util.ParseHelper
-import org.eclipse.xtext.junit4.validation.ValidationTestHelper
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.util.ParseHelper
+import org.eclipse.xtext.testing.validation.ValidationTestHelper
 import org.example.school.school.SchoolModel
+import org.example.school.school.SchoolPackage
 import org.example.school.validation.SchoolValidator
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.example.school.school.SchoolPackage
 
 @RunWith(XtextRunner)
 @InjectWith(SchoolInjectorProvider)

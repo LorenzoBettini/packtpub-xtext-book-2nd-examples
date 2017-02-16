@@ -3,10 +3,10 @@ package org.example.smalljava.tests
 import com.google.inject.Inject
 import com.google.inject.Provider
 import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.junit4.util.ParseHelper
 import org.eclipse.xtext.naming.IQualifiedNameProvider
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.util.ParseHelper
 import org.example.smalljava.SmallJavaLib
 import org.example.smalljava.smallJava.SJProgram
 import org.example.smalljava.typing.SmallJavaTypeConformance

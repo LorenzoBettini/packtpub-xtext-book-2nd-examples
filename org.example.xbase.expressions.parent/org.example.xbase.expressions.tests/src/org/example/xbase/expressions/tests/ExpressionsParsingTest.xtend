@@ -4,15 +4,16 @@
 package org.example.xbase.expressions.tests
 
 import com.google.inject.Inject
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.junit4.util.ParseHelper
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.util.ParseHelper
+import org.eclipse.xtext.xbase.XMemberFeatureCall
+import org.example.xbase.expressions.expressions.EvalExpression
 import org.example.xbase.expressions.expressions.ExpressionsModel
-import static extension org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.example.xbase.expressions.expressions.EvalExpression
-import org.eclipse.xtext.xbase.XMemberFeatureCall
+
+import static org.junit.Assert.*
 
 @RunWith(XtextRunner)
 @InjectWith(ExpressionsInjectorProvider)

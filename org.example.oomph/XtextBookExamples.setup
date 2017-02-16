@@ -108,7 +108,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="xtext.site"
-      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.10.0/"/>
+      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"/>
   <setupTask
       xsi:type="setup:VariableTask"
       name="swtbot.site"
@@ -552,24 +552,10 @@
   <setupTask
       xsi:type="projects:ProjectsImportTask">
     <sourceLocator
-        rootFolder="${git.clone.location}/org.example.helloidea.parent"/>
-    <description>Import Gradle example parent project</description>
-  </setupTask>
-  <setupTask
-      xsi:type="projects:ProjectsBuildTask"
-      id="BuildGradleProjectParent"
-      refresh="true">
-    <description>Build for Gradle parent imported project</description>
-  </setupTask>
-  <setupTask
-      xsi:type="launching:LaunchTask"
-      id="GenerateHelloIdea"
-      launcher="org.example.helloidea.parent - build"/>
-  <setupTask
-      xsi:type="projects:ProjectsImportTask">
-    <sourceLocator
         rootFolder="${git.clone.location}"
-        locateNestedProjects="true"/>
+        locateNestedProjects="true">
+      <excludedPath>org.example.helloidea.parent</excludedPath>
+    </sourceLocator>
     <description>Import remaining projects which are Maven projects</description>
   </setupTask>
   <setupTask
@@ -636,7 +622,7 @@
         licenseConfirmationDisabled="true">
       <requirement
           name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.10.0,2.11.0)"/>
+          versionRange="[2.11.0,2.12.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
@@ -654,8 +640,8 @@
       <description>Xtext &amp; Xtend</description>
     </setupTask>
   </stream>
-  <stream name="xtext-2.11"
-      label="Xtext 2.11">
+  <stream name="xtext-nightly"
+      label="Xtext Nightly">
     <setupTask
         xsi:type="setup:VariableTask"
         name="mwe2.site"
@@ -663,7 +649,7 @@
     <setupTask
         xsi:type="setup:VariableTask"
         name="xtext.site"
-        value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.11.0/"
+        value="http://download.eclipse.org/modeling/tmf/xtext/updates/nightly/"
         defaultValue=""/>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -671,8 +657,7 @@
         label="Xtext Releases"
         licenseConfirmationDisabled="true">
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.11.0,2.12.0)"/>
+          name="org.eclipse.xtext.sdk.feature.group"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement

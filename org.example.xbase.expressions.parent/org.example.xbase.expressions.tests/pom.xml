@@ -23,6 +23,32 @@
 					<failIfNoTests>false</failIfNoTests>
 					<argLine>${memoryArgs}</argLine>
 				</configuration>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>integration-test</phase>
+						<configuration>
+							<excludes>
+								<exclude>**/*SmokeTest.java</exclude>
+							</excludes>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>smoke-test</id>
+						<phase>integration-test</phase>
+						<configuration>
+							<includes>
+								<include>**/*SmokeTest.java</include>
+							</includes>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

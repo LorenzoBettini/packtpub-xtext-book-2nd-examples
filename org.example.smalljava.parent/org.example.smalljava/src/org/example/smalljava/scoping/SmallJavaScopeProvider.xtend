@@ -55,7 +55,7 @@ class SmallJavaScopeProvider extends AbstractSmallJavaScopeProvider {
 	def protected IScope scopeForMemberSelection(SJMemberSelection sel) {
 		val type = sel.receiver.typeFor
 
-		if (type == null || type.isPrimitive)
+		if (type === null || type.isPrimitive)
 			return IScope.NULLSCOPE
 
 		val grouped = type.

@@ -8,6 +8,7 @@ ExpressionsModel returns XBlockExpression:
 	{ExpressionsModel}
 	(expressions+=XExpressionOrVarDeclaration ';'?)*;
 
+@Override 
 XPrimaryExpression returns XExpression:
 	{EvalExpression} 'eval' expression=XExpression |
 	super;

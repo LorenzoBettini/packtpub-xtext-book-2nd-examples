@@ -7,15 +7,16 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>0.23.1</tycho-version>
-		<xtextVersion>2.10.0</xtextVersion>
+		<tycho-version>0.25.0</tycho-version>
+		<xtextVersion>2.11.0</xtextVersion>
+		<mwe2Version>[2.9.0,2.10)</mwe2Version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
 		<memoryArgs>-Xms256M -Xmx1024M -XX:+HeapDumpOnOutOfMemoryError</memoryArgs>
 
-		<target-file-name>neon-xtext-2.10</target-file-name>
+		<target-file-name>neon-xtext-2.11</target-file-name>
 	</properties>
 
 	<modules>
@@ -38,12 +39,12 @@
 				<module>../org.example.xtend.examples</module>
 				<module>../org.example.hellomaven.parent</module>
 				<module>../org.example.helloweb.parent</module>
-				<module>../org.example.helloidea.parent</module>
 				<module>../org.example.xbase.expressions.parent</module>
 				<module>../org.example.xbase.entities.parent</module>
 				<module>../org.example.school.parent</module>
 				<module>../org.example.library.parent</module>
 				<module>../org.example.customgreetings.parent</module>
+<!-- 				<module>../org.example.helloidea.parent</module> -->
 			</modules>
 		</profile>
 		<!-- build only the Entities DSL -->
@@ -323,6 +324,12 @@
 			<releases><enabled>false</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
+		<repository>
+			<id>sonatype-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+			<releases><enabled>true</enabled></releases>
+			<snapshots><enabled>false</enabled></snapshots>
+		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -341,6 +348,12 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 			<releases><enabled>false</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>sonatype-releases</id>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+			<releases><enabled>true</enabled></releases>
+			<snapshots><enabled>false</enabled></snapshots>
 		</pluginRepository>
 	</pluginRepositories>
 

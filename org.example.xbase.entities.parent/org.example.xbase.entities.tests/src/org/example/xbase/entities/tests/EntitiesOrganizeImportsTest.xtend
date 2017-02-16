@@ -1,17 +1,17 @@
 package org.example.xbase.entities.tests
 
 import com.google.inject.Inject
-import org.eclipse.xtext.junit4.InjectWith
-import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.junit4.util.ParseHelper
 import org.eclipse.xtext.resource.XtextResource
+import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.testing.util.ParseHelper
+import org.eclipse.xtext.util.ReplaceRegion
 import org.eclipse.xtext.xbase.imports.ImportOrganizer
+import org.example.xbase.entities.entities.Model
 import org.junit.Test
 import org.junit.runner.RunWith
 
 import static org.junit.Assert.*
-import org.eclipse.xtext.util.ReplaceRegion
-import org.example.xbase.entities.entities.Model
 
 /**
  * copied and adapted from the domain model example
@@ -30,7 +30,7 @@ class EntitiesOrganizeImportsTest {
 		val sortedChanges = changes.sortBy[offset]
 		var ReplaceRegion lastChange = null
 		for (it : sortedChanges) {
-			if (lastChange != null && lastChange.endOffset > offset)
+			if (lastChange !== null && lastChange.endOffset > offset)
 				fail("Overlapping text edits: " + lastChange + ' and ' + it)
 			lastChange = it
 		}
