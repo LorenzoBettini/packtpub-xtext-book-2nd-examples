@@ -6,6 +6,12 @@ In the following we detail the changes required to adapt the examples to the new
 
 ## Xtext 2.11
 
+### IntelliJ support (ATTENTION)
+
+The IntelliJ IDEA integration of Xtext is currently lacking contributors. Therefore, unfortunately, the IDEA support has **not** been part of the 2.11 release.  If you want to try Xtext support for IntelliJ you need to stick with Xtext 2.10.0.
+
+The sources of the example `helloidea` shown in the book will **not** be automatically imported in the workspace, if you use the automatic procedure shown in [GETTINGSOURCES](GETTINGSOURCES.md).
+
 ### Grammar language
 
 The grammar language now supports Java-like annotations; for the moment the annotation `@Override` should be added when you redefine a rule from the parent grammar.  You will get a warning in the editor and a quickfix to add the missing annotation.
@@ -196,8 +202,3 @@ The Maven dependencies in the pom.xml should be updated to newer versions, e.g.,
 ```
 
 The `WebRoot/index.html` must be adapted to the new versions of used dependencies.  The easiest thing to do is to remove that file and have MWE2 regenerate it.
-
-### IntelliJ support (ATTENTION)
-
-Currently, Xtext 2.11 for the IntelliJ support has not been released yet.  If you want to try Xtext support for IntelliJ you need to stick with Xtext 2.10.0.
-
