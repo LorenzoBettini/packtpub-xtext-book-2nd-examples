@@ -27,13 +27,13 @@ XPrimaryExpression returns XExpression:
 
 ### Testing
 
-Many classes from the bundle `org.eclipse.xtext.junit4` have been deprecated: you should now use `org.eclipse.xtext.testing`, which basically provides the same classes, but with with the package `org.eclipse.xtext.testing` instead of `org.eclipse.xtext.junit4`.  The same holds for most classes in `org.eclipse.xtext.xbase.junit`, you should now use the ones from `org.eclipse.xtext.xbase.testing`.
+The non-UI related classes from the bundle `org.eclipse.xtext.junit4` have been deprecated: you should now use `org.eclipse.xtext.testing`, which basically provides the same classes, but with with the package `org.eclipse.xtext.testing` instead of `org.eclipse.xtext.junit4`.  The same holds for non-UI related classes in `org.eclipse.xtext.xbase.junit`, you should now use the ones from `org.eclipse.xtext.xbase.testing`.
  
-Running the mwe2 generator will add the new bundles as dependencies, but you will have to remove the old ones manually from the MANIFEST.MF.  Moreover, the generated injector providers for tests are based on the new bundle, so you will need to manually modify your test cases so that they import and use the new packages (once you removed the old bundle from the dependencies, an "Organize Imports" should automatically fix the imports; if not, please remove manually the old imports and perform an "Organize Imports").
+Running the mwe2 generator will add the new bundles as dependencies.  Moreover, the generated injector providers for tests are based on the new bundles and packages (you will get lots of errors in that respect), so you will need to manually modify your test cases so that they import and use the new packages (once you removed the deprecated imports, use "Organize Imports" and make sure you select the new classes).
 
 `org.eclipse.xtext.xbase.junit.formatter.FormatterTester` must be replaced with `org.eclipse.xtext.testing.formatter.FormatterTestHelper`.
 
-Similar adaptions will have to be performed also in the `.ui.tests` project.  However, for UI tests, `org.eclipse.xtext.junit4` and `org.eclipse.xtext.xbase.junit` are still required, since not all the testing classes have been ported to the new bundles (**TODO**: check the status of <https://github.com/eclipse/xtext-eclipse/issues/156>).
+Similar adaptations will have to be performed also in the `.ui.tests` project concerning the injector providers.  However, for UI tests, `org.eclipse.xtext.junit4` and `org.eclipse.xtext.xbase.junit` are still required, since not all the testing classes have been ported to the new bundles (see <https://github.com/eclipse/xtext-eclipse/issues/156>).
 
 ### Xtend warnings
 
