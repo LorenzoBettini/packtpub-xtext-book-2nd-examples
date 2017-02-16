@@ -85,6 +85,10 @@ Two additional Maven dependencies should be added in that part:
 </dependency>
 ```
 
+### IDE Guice Module
+
+The 2.11 release introduces a new IDE Guice module hierarchy, which is used for generic editor and IDE features (including the web editor).  If you already have an `.ide` project, running mwe2 will generate a few Xtend classes in the `src` folder (and, consequently, some generated Java classes in the `xtend-gen` folder).  Make sure that both `src` and `xtend-gen` are configured as source folders in the existing `.ide` project.
+
 ### Web integration project
 
 A few things have changed concerning Web support that requires manual modifications to Xtend classes in src folder.  If you did not customize anything in the `.web` project, the easiest way is to simply remove that project and run the MWE2 workflow to have that project created from scratch.
