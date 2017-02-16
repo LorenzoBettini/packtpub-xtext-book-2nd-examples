@@ -552,24 +552,10 @@
   <setupTask
       xsi:type="projects:ProjectsImportTask">
     <sourceLocator
-        rootFolder="${git.clone.location}/org.example.helloidea.parent"/>
-    <description>Import Gradle example parent project</description>
-  </setupTask>
-  <setupTask
-      xsi:type="projects:ProjectsBuildTask"
-      id="BuildGradleProjectParent"
-      refresh="true">
-    <description>Build for Gradle parent imported project</description>
-  </setupTask>
-  <setupTask
-      xsi:type="launching:LaunchTask"
-      id="GenerateHelloIdea"
-      launcher="org.example.helloidea.parent - build"/>
-  <setupTask
-      xsi:type="projects:ProjectsImportTask">
-    <sourceLocator
         rootFolder="${git.clone.location}"
-        locateNestedProjects="true"/>
+        locateNestedProjects="true">
+      <excludedPath>org.example.helloidea.parent</excludedPath>
+    </sourceLocator>
     <description>Import remaining projects which are Maven projects</description>
   </setupTask>
   <setupTask
