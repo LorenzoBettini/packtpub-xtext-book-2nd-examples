@@ -7,6 +7,11 @@ ISBN: 9781786464965
 
 https://www.packtpub.com/web-development/implementing-domain-specific-languages-xtext-and-xtend-second-edition
 
+ERRATA
+====
+
+Errata can be found [here](docs/ERRATA.md).
+
 Getting Sources
 ====
 
