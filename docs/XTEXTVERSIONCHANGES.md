@@ -4,7 +4,9 @@ The book was written using Xtext 2.10.0 and some changes were introduced in new 
 
 In the following we detail the changes required to adapt the examples to the new versions of Xtext.
 
-## Xtext 2.11
+## Xtext 2.11.0
+
+Besides the changes shown in this section, you may also want to have a look at the [full release notes of Xtext 2.11.0](https://eclipse.org/Xtext/releasenotes.html#/releasenotes/2017/02/01/version-2-11-0).
 
 ### IntelliJ support (ATTENTION)
 
