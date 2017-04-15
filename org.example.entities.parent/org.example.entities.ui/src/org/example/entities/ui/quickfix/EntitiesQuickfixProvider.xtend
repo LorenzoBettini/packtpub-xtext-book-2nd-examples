@@ -1,13 +1,10 @@
 package org.example.entities.ui.quickfix
 
-import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtext.diagnostics.Diagnostic
-import org.eclipse.xtext.ui.editor.model.edit.IModificationContext
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider
 import org.eclipse.xtext.ui.editor.quickfix.Fix
 import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
 import org.eclipse.xtext.validation.Issue
-import org.example.entities.EntitiesModelUtil
 import org.example.entities.entities.Attribute
 import org.example.entities.entities.EntitiesFactory
 import org.example.entities.entities.Entity
@@ -22,14 +19,13 @@ class EntitiesQuickfixProvider extends DefaultQuickfixProvider {
 	def void capitalizeEntityNameFirstLetter(Issue issue, IssueResolutionAcceptor acceptor) {
 		acceptor.accept(
 			issue,
-			"Create missing entity", // label
-			"Create missing entity", // description
+			"Capitalize first letter", // label
+			"Capitalize first letter of '" + issue.data.get(0) + "'", // description
 			"Entity.gif", // icon
-			[ EObject element, IModificationContext context |
-				EntitiesModelUtil.addEntityAfter(
-					element.getContainerOfType(Entity),
-					context.xtextDocument.get(issue.offset, issue.length)
-				)
+			[ context |
+				val xtextDocument = context.xtextDocument
+				val firstLetter = xtextDocument.get(issue.offset, 1);
+				xtextDocument.replace(issue.offset, 1, firstLetter.toFirstUpper);
 			]
 		)
 	}
