@@ -261,6 +261,8 @@
           name="org.eclipse.oomph.setup.workbench.feature.group"/>
       <requirement
           name="org.eclipse.oomph.setup.workingsets.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/oomph/updates/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
