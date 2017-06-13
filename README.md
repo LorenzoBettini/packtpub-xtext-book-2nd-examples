@@ -5,7 +5,7 @@ This repository contains the sources of the Examples for the book
 *"Implementing Domain-Specific Languages with Xtext and Xtend - Second Edition"*  
 ISBN: 9781786464965
 
-https://www.packtpub.com/web-development/implementing-domain-specific-languages-xtext-and-xtend-second-edition
+https://www.packtpub.com/application-development/implementing-domain-specific-languages-xtext-and-xtend-second-edition
 
 ERRATA and changes in new versions of Xtext
 ====
