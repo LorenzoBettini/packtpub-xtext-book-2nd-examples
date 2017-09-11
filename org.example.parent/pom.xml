@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>0.25.0</tycho-version>
+		<tycho-version>1.0.0</tycho-version>
 		<xtextVersion>2.12.0</xtextVersion>
 		<mwe2Version>2.9.0.201605261059</mwe2Version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
