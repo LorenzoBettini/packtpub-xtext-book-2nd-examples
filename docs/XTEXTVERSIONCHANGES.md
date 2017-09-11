@@ -6,6 +6,12 @@ In the following we detail the changes required to adapt the examples to the new
 
 PLEASE, make sure to read all the required changes in the reverse order, e.g., first apply the changes from Xtext 2.10.0 to Xtext 2.11.0, then the changes from Xtext 2.11.0 to Xtext 2.12.0, etc.
 
+## Xtext 2.12.0
+
+### UI Testing
+
+The UI related classes from the bundle `org.eclipse.xtext.junit4` and `org.eclipse.xtext.xbase.junit` have been deprecated: you should now use `org.eclipse.xtext.ui.testing` and `org.eclipse.xtext.xbase.ui.testing`, which basically provides the same classes, but with with the package `org.eclipse.xtext.ui.testing` and `org.eclipse.xtext.xbase.ui.testing`, respectively (see <https://github.com/eclipse/xtext-eclipse/issues/156>).
+
 ## Xtext 2.11.0
 
 Besides the changes shown in this section, you may also want to have a look at the [full release notes of Xtext 2.11.0](https://eclipse.org/Xtext/releasenotes.html#/releasenotes/2017/02/01/version-2-11-0).
