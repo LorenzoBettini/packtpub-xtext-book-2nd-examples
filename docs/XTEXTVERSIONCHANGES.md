@@ -10,7 +10,9 @@ PLEASE, make sure to read all the required changes in the reverse order, e.g., f
 
 ### UI Testing
 
-The UI related classes from the bundle `org.eclipse.xtext.junit4` and `org.eclipse.xtext.xbase.junit` have been deprecated: you should now use `org.eclipse.xtext.ui.testing` and `org.eclipse.xtext.xbase.ui.testing`, which basically provides the same classes, but with with the package `org.eclipse.xtext.ui.testing` and `org.eclipse.xtext.xbase.ui.testing`, respectively (see <https://github.com/eclipse/xtext-eclipse/issues/156>).
+The UI related classes from the bundle `org.eclipse.xtext.junit4` and `org.eclipse.xtext.xbase.junit` have been deprecated: you should now use `org.eclipse.xtext.ui.testing` and `org.eclipse.xtext.xbase.ui.testing`, which basically provide the same classes, but with with the package `org.eclipse.xtext.ui.testing` and `org.eclipse.xtext.xbase.ui.testing`, respectively (see <https://github.com/eclipse/xtext-eclipse/issues/156>).
+
+So, in your `ui.tests` projects where you get deprecation warnings, please make sure to add the two above mentioned bundles as requirements in the `MANIFEST.MF` and manually modify your test cases so that they import and use the new packages (once you removed the deprecated imports, use "Organize Imports" and make sure you select the new classes).
 
 ## Xtext 2.11.0
 
