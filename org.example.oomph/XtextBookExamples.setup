@@ -283,7 +283,7 @@
         xsi:type="setup.p2:P2Task"
         label="Eclemma Jacoco">
       <requirement
-          name="com.mountainminds.eclemma.feature.feature.group"/>
+          name="org.eclipse.eclemma.feature.feature.group"/>
       <repository
           url="http://update.eclemma.org"/>
     </setupTask>
@@ -291,7 +291,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="Neon"
+      defaultValue="Oxygen"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="git:GitCloneTask"
@@ -338,6 +338,19 @@
       <sourceLocator
           rootFolder="${git.clone.location}"
           locateNestedProjects="true"/>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="http://download.eclipse.org/releases/oxygen/"/>
+        <repository
+            url="http://download.itemis.com/updates/releases/2.1.1/"/>
+        <repository
+            url="${xtext.site}"/>
+        <repository
+            url="${mwe2.site}"/>
+        <repository
+            url="${swtbot.site}"/>
+      </repositoryList>
       <repositoryList
           name="Neon">
         <repository
