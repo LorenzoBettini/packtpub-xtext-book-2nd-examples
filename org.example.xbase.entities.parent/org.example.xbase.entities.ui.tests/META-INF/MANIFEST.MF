@@ -15,7 +15,9 @@ Require-Bundle: org.example.xbase.entities.ui,
  org.eclipse.jdt.core,
  org.example.testutils,
  org.eclipse.xtext.testing,
- org.eclipse.xtext.xbase.testing
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.xtext.ui.testing,
+ org.eclipse.xtext.xbase.ui.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.example.xbase.entities.ui.tests;x-internal=true
 Import-Package: org.hamcrest.core,

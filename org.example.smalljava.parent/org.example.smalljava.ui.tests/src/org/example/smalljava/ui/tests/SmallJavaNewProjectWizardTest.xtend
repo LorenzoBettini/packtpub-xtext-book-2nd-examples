@@ -6,9 +6,9 @@ import org.eclipse.jface.viewers.StructuredSelection
 import org.eclipse.jface.wizard.Wizard
 import org.eclipse.jface.wizard.WizardDialog
 import org.eclipse.ui.PlatformUI
-import org.eclipse.xtext.junit4.ui.AbstractWorkbenchTest
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.ui.testing.AbstractWorkbenchTest
 import org.example.smalljava.ui.SmallJavaTestableNewProjectWizard
 import org.example.testutils.EclipseTestUtils
 import org.example.testutils.PDETargetPlatformUtils
@@ -16,7 +16,7 @@ import org.junit.BeforeClass
 import org.junit.Test
 import org.junit.runner.RunWith
 
-import static org.eclipse.xtext.junit4.ui.util.IResourcesSetupUtil.*
+import static org.eclipse.xtext.ui.testing.util.IResourcesSetupUtil.*
 import static org.example.testutils.EclipseTestUtils.*
 
 @RunWith(XtextRunner)

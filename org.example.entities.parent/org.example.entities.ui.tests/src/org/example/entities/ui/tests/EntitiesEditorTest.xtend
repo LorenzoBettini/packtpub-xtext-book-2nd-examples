@@ -1,8 +1,8 @@
 package org.example.entities.ui.tests
 
-import org.eclipse.xtext.junit4.ui.AbstractEditorTest
 import org.eclipse.xtext.resource.XtextResource
 import org.eclipse.xtext.ui.XtextProjectHelper
+import org.eclipse.xtext.ui.testing.AbstractEditorTest
 import org.eclipse.xtext.util.CancelIndicator
 import org.eclipse.xtext.util.concurrent.CancelableUnitOfWork
 import org.example.entities.EntitiesModelUtil
@@ -11,8 +11,8 @@ import org.example.entities.entities.Model
 import org.junit.Before
 import org.junit.Test
 
-import static extension org.eclipse.xtext.junit4.ui.util.IResourcesSetupUtil.*
-import static extension org.eclipse.xtext.junit4.ui.util.JavaProjectSetupUtil.*
+import static extension org.eclipse.xtext.ui.testing.util.IResourcesSetupUtil.*
+import static extension org.eclipse.xtext.ui.testing.util.JavaProjectSetupUtil.*
 
 class EntitiesEditorTest extends AbstractEditorTest {
 	val TEST_PROJECT = "mytestproject"
