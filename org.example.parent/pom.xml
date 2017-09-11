@@ -16,7 +16,7 @@
 
 		<memoryArgs>-Xms256M -Xmx1024M -XX:+HeapDumpOnOutOfMemoryError</memoryArgs>
 
-		<target-file-name>oxygen-xtext-2.12</target-file-name>
+		<target-file-name>neon-xtext-2.12</target-file-name>
 	</properties>
 
 	<modules>
