@@ -1,8 +1,8 @@
 package org.example.school.ui.tests
 
-import org.eclipse.xtext.junit4.ui.AbstractOutlineTest
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.ui.testing.AbstractOutlineTest
 import org.example.school.ui.internal.SchoolActivator
 import org.junit.Test
 import org.junit.runner.RunWith
