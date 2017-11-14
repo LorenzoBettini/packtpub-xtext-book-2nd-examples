@@ -6,6 +6,12 @@ In the following we detail the changes required to adapt the examples to the new
 
 PLEASE, make sure to read all the required changes in the reverse order, e.g., first apply the changes from Xtext 2.10.0 to Xtext 2.11.0, then the changes from Xtext 2.11.0 to Xtext 2.12.0, etc.
 
+## Xtext 2.13.0
+
+The `plugin.xml_gen`, after regeneration, will contain additional parts, so make sure you merge such parts with the `plugin.xml` in the UI projects.
+
+The version of Maven artifact `org.eclipse.emf.mwe2.launch` must now be `2.9.1.201705291010`.
+
 ## Xtext 2.12.0
 
 ### UI Testing
