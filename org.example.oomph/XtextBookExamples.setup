@@ -108,7 +108,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="xtext.site"
-      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.12.0/"/>
+      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.13.0/"/>
   <setupTask
       xsi:type="setup:VariableTask"
       name="swtbot.site"
@@ -221,23 +221,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
-        label="Findbugs">
-      <requirement
-          name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"
-          optional="true"/>
-      <repository
-          url="http://findbugs.cs.umd.edu/eclipse/"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
-        label="B3 Aggregator">
-      <requirement
-          name="org.eclipse.b3.aggregator.editor.feature.feature.group"/>
-      <repository
-          url="http://download.eclipse.org/modeling/emft/b3/updates-4.4"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
         label="Oomph Extensions">
       <requirement
           name="org.eclipse.oomph.setup.git.feature.group"/>
@@ -261,8 +244,6 @@
           name="org.eclipse.oomph.setup.workbench.feature.group"/>
       <requirement
           name="org.eclipse.oomph.setup.workingsets.feature.group"/>
-      <repository
-          url="http://download.eclipse.org/oomph/updates/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -637,7 +618,7 @@
         licenseConfirmationDisabled="true">
       <requirement
           name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.12.0,2.13.0)"/>
+          versionRange="[2.13.0,2.14.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
