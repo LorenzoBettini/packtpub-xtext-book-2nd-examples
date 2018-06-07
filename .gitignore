@@ -18,3 +18,5 @@ target
 # for Gradle builds
 build
 .gradle
+
+.DS_Store
