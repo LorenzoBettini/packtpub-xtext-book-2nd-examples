@@ -6,6 +6,10 @@ In the following we detail the changes required to adapt the examples to the new
 
 PLEASE, make sure to read all the required changes in the reverse order, e.g., first apply the changes from Xtext 2.10.0 to Xtext 2.11.0, then the changes from Xtext 2.11.0 to Xtext 2.12.0, etc.
 
+## Xtext 2.17.0 and Eclipse 2018-12
+
+Support for x86 architectures have been removed. In the parent POMs you must make sure you only have configurations for `x86_64`.
+
 ## Xtext 2.13.0
 
 The `plugin.xml_gen`, after regeneration, will contain additional parts, so make sure you merge such parts with the `plugin.xml` in the UI projects.
