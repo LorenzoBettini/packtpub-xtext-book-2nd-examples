@@ -123,6 +123,8 @@
           name="org.eclipse.sdk.feature.group"/>
       <requirement
           name="org.eclipse.wst.xml_ui.feature.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/releases/2018-12/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -137,8 +139,6 @@
         label="Buildship">
       <requirement
           name="org.eclipse.buildship.feature.group"/>
-      <repository
-          url="http://download.eclipse.org/buildship/updates/e45/releases/1.0"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -265,8 +265,6 @@
         label="Eclemma Jacoco">
       <requirement
           name="org.eclipse.eclemma.feature.feature.group"/>
-      <repository
-          url="http://update.eclemma.org"/>
     </setupTask>
   </setupTask>
   <setupTask
