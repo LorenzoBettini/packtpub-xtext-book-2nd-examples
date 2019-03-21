@@ -16,16 +16,18 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtend.lib;bundle-version="2.13.0",
  org.eclipse.emf.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.xbase.expressions.expressions.impl,
- org.example.xbase.expressions,
+Export-Package: org.example.xbase.expressions,
+ org.example.xbase.expressions.compiler,
  org.example.xbase.expressions.expressions,
- org.example.xbase.expressions.parser.antlr,
- org.example.xbase.expressions.services,
- org.example.xbase.expressions.serializer,
+ org.example.xbase.expressions.expressions.impl,
  org.example.xbase.expressions.expressions.util,
- org.example.xbase.expressions.validation,
- org.example.xbase.expressions.scoping,
+ org.example.xbase.expressions.jvmmodel,
+ org.example.xbase.expressions.parser.antlr,
  org.example.xbase.expressions.parser.antlr.internal,
- org.example.xbase.expressions.jvmmodel
+ org.example.xbase.expressions.scoping,
+ org.example.xbase.expressions.serializer,
+ org.example.xbase.expressions.services,
+ org.example.xbase.expressions.typesystem,
+ org.example.xbase.expressions.validation
 Import-Package: org.apache.log4j
 Automatic-Module-Name: org.example.xbase.expressions

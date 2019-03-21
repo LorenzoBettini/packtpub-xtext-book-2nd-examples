@@ -9,6 +9,7 @@ Require-Bundle: org.example.hellomaven,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide,org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.hellomaven.ide.contentassist.antlr.internal,
- org.example.hellomaven.ide.contentassist.antlr
+Export-Package: org.example.hellomaven.ide,
+ org.example.hellomaven.ide.contentassist.antlr,
+ org.example.hellomaven.ide.contentassist.antlr.internal
 Automatic-Module-Name: org.example.hellomaven.ide

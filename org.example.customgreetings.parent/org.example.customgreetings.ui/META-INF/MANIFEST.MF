@@ -18,8 +18,11 @@ Require-Bundle: org.example.customgreetings,
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.customgreetings.ui.contentassist,
- org.example.customgreetings.ui.quickfix,
- org.example.customgreetings.ui.internal
+Export-Package: org.example.customgreetings.ui,
+ org.example.customgreetings.ui.contentassist,
+ org.example.customgreetings.ui.internal,
+ org.example.customgreetings.ui.labeling,
+ org.example.customgreetings.ui.outline,
+ org.example.customgreetings.ui.quickfix
 Bundle-Activator: org.example.customgreetings.ui.internal.CustomgreetingsActivator
 Automatic-Module-Name: org.example.customgreetings.ui

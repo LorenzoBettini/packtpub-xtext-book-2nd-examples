@@ -8,3 +8,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: com.google.inject;bundle-version="3.0.0",
  javax.inject;bundle-version="1.0.0"
 Automatic-Module-Name: org.example.guice
+Export-Package: org.example.guice,
+ org.example.guice.impl,
+ org.example.guice.main,
+ org.example.guice.modules,
+ org.example.guice.singleton

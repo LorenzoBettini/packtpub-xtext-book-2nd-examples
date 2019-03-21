@@ -20,8 +20,11 @@ Require-Bundle: org.example.smalljava,
  org.eclipse.core.resources
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.smalljava.ui.contentassist,
+Export-Package: org.example.smalljava.ui,
+ org.example.smalljava.ui.contentassist,
  org.example.smalljava.ui.internal,
+ org.example.smalljava.ui.labeling,
+ org.example.smalljava.ui.outline,
  org.example.smalljava.ui.quickfix,
  org.example.smalljava.ui.wizard
 Bundle-Activator: org.example.smalljava.ui.internal.SmalljavaActivator

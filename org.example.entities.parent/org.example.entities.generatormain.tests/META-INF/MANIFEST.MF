@@ -8,3 +8,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.example.entities,
  org.junit
 Automatic-Module-Name: org.example.entities.generatormain.tests
+Export-Package: entities,
+ org.example.entities.generatormain.tests

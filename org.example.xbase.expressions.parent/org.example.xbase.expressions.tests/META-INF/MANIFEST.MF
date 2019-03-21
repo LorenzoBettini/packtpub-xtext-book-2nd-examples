@@ -13,7 +13,8 @@ Require-Bundle: org.example.xbase.expressions,
  org.eclipse.xtext.testing,
  org.eclipse.xtext.xbase.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.xbase.expressions.tests;x-internal=true
+Export-Package: org.example.xbase.expressions.smoke.tests,
+ org.example.xbase.expressions.tests;x-internal=true
 Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
  org.junit.runners.model;version="4.5.0",

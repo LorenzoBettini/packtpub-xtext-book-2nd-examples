@@ -8,3 +8,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.junit,
  org.example.smalljava
 Automatic-Module-Name: org.example.smalljava.generatormain.tests
+Export-Package: org.example.smalljava.generatormain.tests,
+ smalljava.examples,
+ smalljava.examples2

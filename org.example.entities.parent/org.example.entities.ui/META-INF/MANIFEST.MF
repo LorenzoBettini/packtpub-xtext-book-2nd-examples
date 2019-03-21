@@ -18,8 +18,11 @@ Require-Bundle: org.example.entities,
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.entities.ui.contentassist,
- org.example.entities.ui.quickfix,
- org.example.entities.ui.internal
+Export-Package: org.example.entities.ui,
+ org.example.entities.ui.contentassist,
+ org.example.entities.ui.internal,
+ org.example.entities.ui.labeling,
+ org.example.entities.ui.outline,
+ org.example.entities.ui.quickfix
 Bundle-Activator: org.example.entities.ui.internal.EntitiesActivator
 Automatic-Module-Name: org.example.entities.ui
