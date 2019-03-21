@@ -19,7 +19,7 @@ class SmallJavaLib {
 	public val static LIB_INTEGER = LIB_PACKAGE + ".Integer"
 	public val static LIB_BOOLEAN = LIB_PACKAGE + ".Boolean"
 
-	private static final Logger LOG = Logger.getLogger(SmallJavaLib);
+	static final Logger LOG = Logger.getLogger(SmallJavaLib);
 
 	def loadLib(ResourceSet resourceSet) {
 		val url = getClass().getClassLoader().getResource(MAIN_LIB)

@@ -23,7 +23,7 @@ import org.example.smalljava.smallJava.SmallJavaPackage
 import static extension org.eclipse.xtext.EcoreUtil2.*
 
 class SmallJavaTypeComputer {
-	private static val factory = SmallJavaFactory.eINSTANCE
+	static val factory = SmallJavaFactory.eINSTANCE
 	public static val STRING_TYPE = factory.createSJClass => [name = 'stringType']
 	public static val INT_TYPE = factory.createSJClass => [name = 'intType']
 	public static val BOOLEAN_TYPE = factory.createSJClass => [name = 'booleanType']
