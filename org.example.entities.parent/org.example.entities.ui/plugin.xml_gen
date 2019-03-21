@@ -397,12 +397,18 @@
 			class="org.example.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="entities">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.entities.Entities.contenttype"
+			contentViewerId="org.example.entities.Entities.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.entities.Entities.compare.contentMergeViewers"
 			class="org.example.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="entities" label="Entities Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.entities.Entities.contenttype"
+			contentMergeViewerId="org.example.entities.Entities.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.entities.Entities.editors.documentProviders"

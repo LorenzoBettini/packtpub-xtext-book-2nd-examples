@@ -397,12 +397,18 @@
 			class="org.example.school.ui.SchoolExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="school">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.school.School.contenttype"
+			contentViewerId="org.example.school.School.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.school.School.compare.contentMergeViewers"
 			class="org.example.school.ui.SchoolExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="school" label="School Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.school.School.contenttype"
+			contentMergeViewerId="org.example.school.School.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.school.School.editors.documentProviders"

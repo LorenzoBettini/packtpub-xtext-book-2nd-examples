@@ -397,12 +397,18 @@
 			class="org.example.hellomaven.ui.HelloMavenExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="hellomaven">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.hellomaven.HelloMaven.contenttype"
+			contentViewerId="org.example.hellomaven.HelloMaven.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.hellomaven.HelloMaven.compare.contentMergeViewers"
 			class="org.example.hellomaven.ui.HelloMavenExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="hellomaven" label="HelloMaven Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.hellomaven.HelloMaven.contenttype"
+			contentMergeViewerId="org.example.hellomaven.HelloMaven.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.hellomaven.HelloMaven.editors.documentProviders"

@@ -397,12 +397,18 @@
 			class="org.example.customgreetings.ui.GreetingsExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="greetings">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.customgreetings.Greetings.contenttype"
+			contentViewerId="org.example.customgreetings.Greetings.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.customgreetings.Greetings.compare.contentMergeViewers"
 			class="org.example.customgreetings.ui.GreetingsExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="greetings" label="Greetings Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.customgreetings.Greetings.contenttype"
+			contentMergeViewerId="org.example.customgreetings.Greetings.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.customgreetings.Greetings.editors.documentProviders"
