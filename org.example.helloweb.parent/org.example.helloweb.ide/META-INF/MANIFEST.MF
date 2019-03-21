@@ -7,10 +7,9 @@ Bundle-SymbolicName: org.example.helloweb.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.example.helloweb,
  org.eclipse.xtext.ide,
- org.eclipse.xtext.xbase.ide,
- org.antlr.runtime
+ org.eclipse.xtext.xbase.ide,org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.example.helloweb.ide,
  org.example.helloweb.ide.contentassist.antlr,
  org.example.helloweb.ide.contentassist.antlr.internal
-
+Automatic-Module-Name: org.example.helloweb.ide

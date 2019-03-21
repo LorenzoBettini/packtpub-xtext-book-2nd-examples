@@ -10,4 +10,5 @@ Require-Bundle: com.google.guava,
  org.eclipse.xtend.lib.macro,
  org.example.entities;bundle-version="1.0.0",
  org.eclipse.emf.ecore
+Automatic-Module-Name: org.example.xtend.examples
 

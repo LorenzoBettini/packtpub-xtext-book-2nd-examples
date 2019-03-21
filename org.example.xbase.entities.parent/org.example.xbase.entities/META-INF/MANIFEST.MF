@@ -29,3 +29,4 @@ Export-Package: org.example.xbase.entities,
  org.example.xbase.entities.parser.antlr,
  org.example.xbase.entities.formatting2
 Import-Package: org.apache.log4j
+Automatic-Module-Name: org.example.xbase.entities

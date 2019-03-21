@@ -28,3 +28,4 @@ Export-Package: org.example.xbase.expressions.expressions.impl,
  org.example.xbase.expressions.parser.antlr.internal,
  org.example.xbase.expressions.jvmmodel
 Import-Package: org.apache.log4j
+Automatic-Module-Name: org.example.xbase.expressions

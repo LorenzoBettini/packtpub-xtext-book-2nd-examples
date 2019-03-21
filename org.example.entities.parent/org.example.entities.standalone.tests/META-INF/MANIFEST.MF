@@ -7,3 +7,4 @@ Bundle-Vendor: Lorenzo Bettini
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.example.entities,
  org.junit
+Automatic-Module-Name: org.example.entities.standalone.tests
