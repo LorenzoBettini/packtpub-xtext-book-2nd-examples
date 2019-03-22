@@ -124,7 +124,7 @@
       <requirement
           name="org.eclipse.wst.xml_ui.feature.feature.group"/>
       <repository
-          url="http://download.eclipse.org/releases/2018-12/"/>
+          url="http://download.eclipse.org/releases/2019-03/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -270,7 +270,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="2018-12"
+      defaultValue="2019-03"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="git:GitCloneTask"
@@ -331,9 +331,9 @@
             url="${swtbot.site}"/>
       </repositoryList>
       <repositoryList
-          name="2018-12">
+          name="2019-03">
         <repository
-            url="http://download.eclipse.org/releases/2018-12/"/>
+            url="http://download.eclipse.org/releases/2019-03/"/>
         <repository
             url="http://download.itemis.com/updates/releases/2.1.1/"/>
         <repository
