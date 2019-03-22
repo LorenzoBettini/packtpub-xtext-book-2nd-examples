@@ -10,6 +10,38 @@ PLEASE, make sure to read all the required changes in the reverse order, e.g., f
 
 Support for x86 architectures have been removed. In the parent POMs you must make sure you only have configurations for `x86_64`.
 
+Xtext has introduced support for Java 9 and later, including Java 11.
+
+For example, for running tests with Java 9 or later, you need to pass this command line argument to tycho.surefire `--add-modules=ALL-SYSTEM`.
+
+The POMs of the examples have been updated. The Xtext 2.17 project wizard already generates the correct configurations in the POMs. Either you look at the POMs of the examples (in particular the self-contained `org.example.hellomaven.parent` project)
+or you generate a brand new set of projects and draw inspiration from there.
+
+Due to a problem with `javax.annotation` when using Java 11
+(see https://github.com/eclipse/xtext-core/pull/934 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=539038) until Tycho 1.4.0 is release (which fixes this problem), in the `.tests` project (not the `.ui.tests`) this additional configuration must be specified:
+
+```xml
+<plugin>
+	<groupId>org.eclipse.tycho</groupId>
+	<artifactId>target-platform-configuration</artifactId>
+	<configuration>
+		<dependency-resolution>
+			<extraRequirements>
+				<!-- Required in Java 11 See https://bugs.eclipse.org/bugs/show_bug.cgi?id=539038 
+					https://github.com/eclipse/xtext-core/pull/934 -->
+				<requirement>
+					<type>eclipse-feature</type>
+					<id>org.eclipse.rcp</id>
+					<versionRange>0.0.0</versionRange>
+				</requirement>
+			</extraRequirements>
+		</dependency-resolution>
+	</configuration>
+</plugin>
+```
+
+The Xtext 2.17 project wizard already generates this configuration in the POM of the `.tests` project. You have to manually add it only in your existing POMs. The POMs of the examples of the book have already been updated.
+
 ## Xtext 2.13.0
 
 The `plugin.xml_gen`, after regeneration, will contain additional parts, so make sure you merge such parts with the `plugin.xml` in the UI projects.

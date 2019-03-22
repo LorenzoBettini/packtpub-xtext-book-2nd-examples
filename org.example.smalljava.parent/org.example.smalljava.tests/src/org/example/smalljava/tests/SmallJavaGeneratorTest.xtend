@@ -255,7 +255,7 @@ class SmallJavaGeneratorTest {
 				}
 			}
 		'''.compile [
-			getCompiledClass.newInstance => [
+			getCompiledClass.getDeclaredConstructor().newInstance => [
 				assertNotNull(it.invoke("m"))
 				assertEquals("class C", it.invoke("m").invoke("getClass").toString)
 			]
@@ -309,7 +309,7 @@ class SmallJavaGeneratorTest {
 				
 			}
 		'''.compile [
-			val C = getCompiledClass("my.pack.C").newInstance
+			val C = getCompiledClass("my.pack.C").getDeclaredConstructor().newInstance
 			assertEquals("class my.pack.D", C.invoke("m").invoke("getClass").toString)
 		]
 	}
