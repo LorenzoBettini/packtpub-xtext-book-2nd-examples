@@ -420,7 +420,7 @@ class EntitiesCompilerTest {
 			attr l = newArrayList(1, 2, 3);
 			attr s = "test";
 		}'''.compile [
-			val obj = it.compiledClass.newInstance
+			val obj = it.compiledClass.getDeclaredConstructor().newInstance
 			'''
 			entity C {
 				l = [1, 2, 3]

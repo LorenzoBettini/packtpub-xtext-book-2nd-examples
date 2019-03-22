@@ -405,7 +405,7 @@ class ExpressionsCompilerTest{
 		val backup = System.out
 		System.setOut(new PrintStream(out))
 		try {
-			val instance = clazz.newInstance
+			val instance = clazz.getDeclaredConstructor().newInstance
 			clazz.declaredMethods.findFirst[name == 'main'] => [
 				accessible = true
 				invoke(instance, #[args])
