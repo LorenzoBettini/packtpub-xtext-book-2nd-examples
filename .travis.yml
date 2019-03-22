@@ -4,7 +4,7 @@ matrix:
   fast_finish: true
   include:
     - os: linux
-      jdk: openjdk8
+      jdk: openjdk11
       env: DISPLAY=:99.0
     - os: osx
       osx_image: xcode9.3 # JDK 1.8.0_112-b16
