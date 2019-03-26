@@ -8,13 +8,14 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.example.xbase.entities,
  org.junit;bundle-version="4.7.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.objectweb.asm;bundle-version="[7.0.0,7.1.0)";resolution:=optional,
  org.eclipse.jdt.core,
  org.eclipse.xtext.testing,
  org.eclipse.xtext.xbase.testing,
  org.eclipse.xtext.xbase.junit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.xbase.entities.tests;x-internal=true
+Export-Package: entities,
+ org.example.xbase.entities.tests;x-internal=true
 Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
  org.junit.runners.model;version="4.5.0",
@@ -22,3 +23,4 @@ Import-Package: org.hamcrest.core,
  org.junit.runners;version="4.5.0",
  org.junit.runner.manipulation;version="4.5.0",
  org.junit.runner.notification;version="4.5.0"
+Automatic-Module-Name: org.example.xbase.entities.tests

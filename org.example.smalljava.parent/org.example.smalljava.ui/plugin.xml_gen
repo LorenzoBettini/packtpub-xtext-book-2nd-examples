@@ -397,12 +397,18 @@
 			class="org.example.smalljava.ui.SmallJavaExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="smalljava">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.smalljava.SmallJava.contenttype"
+			contentViewerId="org.example.smalljava.SmallJava.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.smalljava.SmallJava.compare.contentMergeViewers"
 			class="org.example.smalljava.ui.SmallJavaExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="smalljava" label="SmallJava Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.smalljava.SmallJava.contenttype"
+			contentMergeViewerId="org.example.smalljava.SmallJava.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.smalljava.SmallJava.editors.documentProviders"

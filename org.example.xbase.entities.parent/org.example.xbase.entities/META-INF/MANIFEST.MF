@@ -11,8 +11,8 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.ecore,
  org.eclipse.xtext.common.types,
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
- org.antlr.runtime,
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ org.objectweb.asm;bundle-version="[7.0.0,7.1.0)";resolution:=optional,
  org.eclipse.xtext.util,
  org.eclipse.xtend.lib;bundle-version="2.13.0",
  org.eclipse.emf.common
@@ -30,3 +30,4 @@ Export-Package: org.example.xbase.entities,
  org.example.xbase.entities.parser.antlr,
  org.example.xbase.entities.formatting2
 Import-Package: org.apache.log4j
+Automatic-Module-Name: org.example.xbase.entities

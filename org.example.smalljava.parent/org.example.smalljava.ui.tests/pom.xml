@@ -9,10 +9,6 @@
 	<artifactId>org.example.smalljava.ui.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 
-	<properties>
-		<tycho.testArgLine></tycho.testArgLine>
-	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -22,11 +18,8 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-surefire-plugin</artifactId>
-				<version>${tycho-version}</version>
 				<configuration>
-					<failIfNoTests>false</failIfNoTests>
 					<useUIHarness>true</useUIHarness>
-					<argLine>${tycho.testArgLine} -DbuildingWithTycho=true</argLine>
 				</configuration>
 				<executions>
 					<execution>
@@ -86,17 +79,4 @@
 		</plugins>
 	</build>
 
-	<profiles>
-		<profile>
-			<id>testing-on-mac</id>
-			<activation>
-				<os>
-					<family>mac</family>
-				</os>
-			</activation>
-			<properties>
-				<tycho.testArgLine>-XstartOnFirstThread</tycho.testArgLine>
-			</properties>
-		</profile>
-	</profiles>
 </project>

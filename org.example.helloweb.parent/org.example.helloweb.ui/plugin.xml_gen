@@ -249,6 +249,15 @@
 		<super type="org.eclipse.xtext.ui.check.expensive"/>
 		<persistent value="true"/>
 	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="org.example.helloweb.HelloWeb"
+			class="org.example.helloweb.ui.HelloWebExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
+			id="org.example.helloweb.HelloWeb.validator.preferencePage"
+			name="Errors/Warnings">
+			<keywordReference id="org.example.helloweb.ui.keyword_HelloWeb"/>
+		</page>
+	</extension>
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
 			class="org.example.helloweb.ui.HelloWebExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
@@ -397,12 +406,18 @@
 			class="org.example.helloweb.ui.HelloWebExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="helloweb">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.helloweb.HelloWeb.contenttype"
+			contentViewerId="org.example.helloweb.HelloWeb.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.helloweb.HelloWeb.compare.contentMergeViewers"
 			class="org.example.helloweb.ui.HelloWebExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="helloweb" label="HelloWeb Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.helloweb.HelloWeb.contenttype"
+			contentMergeViewerId="org.example.helloweb.HelloWeb.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.helloweb.HelloWeb.editors.documentProviders"

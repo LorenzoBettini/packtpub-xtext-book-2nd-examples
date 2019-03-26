@@ -10,7 +10,7 @@ Require-Bundle: org.example.school.model,
  org.eclipse.xtext.xbase,
  org.eclipse.equinox.common;bundle-version="3.5.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
- org.antlr.runtime,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
  org.eclipse.xtext.util,
  org.eclipse.xtend.lib;bundle-version="2.13.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
@@ -18,8 +18,10 @@ Export-Package: org.example.school,
  org.example.school.generator,
  org.example.school.parser.antlr,
  org.example.school.parser.antlr.internal,
+ org.example.school.resource,
  org.example.school.scoping,
  org.example.school.serializer,
  org.example.school.services,
  org.example.school.validation
 Import-Package: org.apache.log4j
+Automatic-Module-Name: org.example.school

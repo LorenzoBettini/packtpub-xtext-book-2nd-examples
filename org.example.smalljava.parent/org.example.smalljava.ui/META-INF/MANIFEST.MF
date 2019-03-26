@@ -14,15 +14,18 @@ Require-Bundle: org.example.smalljava,
  org.eclipse.ui.ide;bundle-version="3.5.0",
  org.eclipse.ui,
  org.eclipse.compare,
- org.eclipse.xtext.builder,
- org.eclipse.xtend.lib;resolution:=optional,
+ org.eclipse.xtext.builder,org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
  org.eclipse.core.runtime,
  org.eclipse.core.resources
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.smalljava.ui.contentassist,
+Export-Package: org.example.smalljava.ui,
+ org.example.smalljava.ui.contentassist,
  org.example.smalljava.ui.internal,
+ org.example.smalljava.ui.labeling,
+ org.example.smalljava.ui.outline,
  org.example.smalljava.ui.quickfix,
  org.example.smalljava.ui.wizard
 Bundle-Activator: org.example.smalljava.ui.internal.SmalljavaActivator
+Automatic-Module-Name: org.example.smalljava.ui

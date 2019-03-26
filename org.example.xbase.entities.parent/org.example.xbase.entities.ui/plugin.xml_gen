@@ -484,7 +484,7 @@
 	</extension>
 	<extension point="org.eclipse.core.runtime.adapters">
 		<factory class="org.example.xbase.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.builder.smap.StratumBreakpointAdapterFactory"
-			adaptableType="org.eclipse.xtext.ui.editor.XtextEditor">
+			adaptableType="org.example.xbase.entities.ui.editor.EntitiesEditor">
 			<adapter type="org.eclipse.debug.ui.actions.IToggleBreakpointsTarget"/>
 		</factory> 
 	</extension>
@@ -578,12 +578,18 @@
 			class="org.example.xbase.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="xentities">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.xbase.entities.Entities.contenttype"
+			contentViewerId="org.example.xbase.entities.Entities.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.xbase.entities.Entities.compare.contentMergeViewers"
 			class="org.example.xbase.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="xentities" label="Entities Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.xbase.entities.Entities.contenttype"
+			contentMergeViewerId="org.example.xbase.entities.Entities.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.xbase.entities.Entities.editors.documentProviders"

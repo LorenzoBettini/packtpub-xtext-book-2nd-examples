@@ -397,12 +397,18 @@
 			class="org.example.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="expressions">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.expressions.Expressions.contenttype"
+			contentViewerId="org.example.expressions.Expressions.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.expressions.Expressions.compare.contentMergeViewers"
 			class="org.example.expressions.ui.ExpressionsExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="expressions" label="Expressions Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.expressions.Expressions.contenttype"
+			contentMergeViewerId="org.example.expressions.Expressions.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.expressions.Expressions.editors.documentProviders"

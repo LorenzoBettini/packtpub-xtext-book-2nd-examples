@@ -13,8 +13,7 @@ Require-Bundle: org.example.xbase.expressions,
  org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.ui.ide;bundle-version="3.5.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
- org.eclipse.xtext.common.types.ui,
- org.eclipse.xtend.lib;resolution:=optional,
+ org.eclipse.xtext.common.types.ui,org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
  org.eclipse.ui,
  org.eclipse.xtext.xbase.ui,
  org.eclipse.compare,
@@ -24,5 +23,7 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.example.xbase.expressions.ui.contentassist,
  org.example.xbase.expressions.ui.quickfix,
- org.example.xbase.expressions.ui.internal
+ org.example.xbase.expressions.ui.internal,
+ org.example.xbase.expressions.ui.editor
 Bundle-Activator: org.example.xbase.expressions.ui.internal.ExpressionsActivator
+Automatic-Module-Name: org.example.xbase.expressions.ui

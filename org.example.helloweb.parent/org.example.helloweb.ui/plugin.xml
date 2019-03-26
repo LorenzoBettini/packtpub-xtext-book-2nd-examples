@@ -397,12 +397,18 @@
 			class="org.example.helloweb.ui.HelloWebExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="helloweb">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.helloweb.HelloWeb.contenttype"
+			contentViewerId="org.example.helloweb.HelloWeb.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="org.example.helloweb.HelloWeb.compare.contentMergeViewers"
 			class="org.example.helloweb.ui.HelloWebExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="helloweb" label="HelloWeb Compare">
 		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.example.helloweb.HelloWeb.contenttype"
+			contentMergeViewerId="org.example.helloweb.HelloWeb.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="org.example.helloweb.HelloWeb.editors.documentProviders"

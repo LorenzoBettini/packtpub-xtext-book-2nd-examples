@@ -15,12 +15,15 @@ Require-Bundle: org.example.library,
  org.eclipse.ui.ide;bundle-version="3.5.0",
  org.eclipse.ui,
  org.eclipse.compare,
- org.eclipse.xtext.builder,
- org.eclipse.xtend.lib;resolution:=optional,
+ org.eclipse.xtext.builder,org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.example.library.ui.contentassist,
- org.example.library.ui.quickfix,
- org.example.library.ui.internal
+Export-Package: org.example.library.ui,
+ org.example.library.ui.contentassist,
+ org.example.library.ui.internal,
+ org.example.library.ui.labeling,
+ org.example.library.ui.outline,
+ org.example.library.ui.quickfix
 Bundle-Activator: org.example.library.ui.internal.LibraryActivator
+Automatic-Module-Name: org.example.library.ui

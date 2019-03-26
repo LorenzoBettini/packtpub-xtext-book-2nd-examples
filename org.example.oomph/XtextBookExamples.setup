@@ -104,15 +104,11 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="mwe2.site"
-      value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.9.1/"/>
+      value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.10.0/"/>
   <setupTask
       xsi:type="setup:VariableTask"
       name="xtext.site"
-      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.13.0/"/>
-  <setupTask
-      xsi:type="setup:VariableTask"
-      name="swtbot.site"
-      value="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.17.0/"/>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="Eclipse IDE Plugins">
@@ -123,6 +119,8 @@
           name="org.eclipse.sdk.feature.group"/>
       <requirement
           name="org.eclipse.wst.xml_ui.feature.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/releases/2019-03/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -137,8 +135,6 @@
         label="Buildship">
       <requirement
           name="org.eclipse.buildship.feature.group"/>
-      <repository
-          url="http://download.eclipse.org/buildship/updates/e45/releases/1.0"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -247,32 +243,15 @@
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
-        id="p2.swtbot"
-        label="SWTBot"
-        licenseConfirmationDisabled="true">
-      <requirement
-          name="org.eclipse.swtbot.eclipse.feature.group"/>
-      <requirement
-          name="org.eclipse.swtbot.ide.feature.group"/>
-      <requirement
-          name="org.eclipse.swtbot.generator.feature.feature.group"/>
-      <repository
-          url="${swtbot.site}"/>
-      <description>UI testing framework</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
         label="Eclemma Jacoco">
       <requirement
           name="org.eclipse.eclemma.feature.feature.group"/>
-      <repository
-          url="http://update.eclemma.org"/>
     </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="Oxygen"
+      defaultValue="2019-03"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="git:GitCloneTask"
@@ -320,43 +299,15 @@
           rootFolder="${git.clone.location}"
           locateNestedProjects="true"/>
       <repositoryList
-          name="Oxygen">
+          name="2019-03">
         <repository
-            url="http://download.eclipse.org/releases/oxygen/"/>
-        <repository
-            url="http://download.itemis.com/updates/releases/2.1.1/"/>
-        <repository
-            url="${xtext.site}"/>
-        <repository
-            url="${mwe2.site}"/>
-        <repository
-            url="${swtbot.site}"/>
-      </repositoryList>
-      <repositoryList
-          name="Neon">
-        <repository
-            url="http://download.eclipse.org/releases/neon/"/>
+            url="http://download.eclipse.org/releases/2019-03/"/>
         <repository
             url="http://download.itemis.com/updates/releases/2.1.1/"/>
         <repository
             url="${xtext.site}"/>
         <repository
             url="${mwe2.site}"/>
-        <repository
-            url="${swtbot.site}"/>
-      </repositoryList>
-      <repositoryList
-          name="Mars">
-        <repository
-            url="http://download.eclipse.org/releases/mars"/>
-        <repository
-            url="http://download.itemis.com/updates/releases/2.1.1/"/>
-        <repository
-            url="${xtext.site}"/>
-        <repository
-            url="${mwe2.site}"/>
-        <repository
-            url="${swtbot.site}"/>
       </repositoryList>
     </targlet>
   </setupTask>
@@ -386,7 +337,7 @@
             pattern=".*entities.*"/>
         <operand
             xsi:type="workingsets:ExclusionPredicate"
-            excludedWorkingSet="//@setupTasks.17/@workingSets.0"/>
+            excludedWorkingSet="//@setupTasks.16/@workingSets.0"/>
       </predicate>
     </workingSet>
     <workingSet
@@ -413,7 +364,7 @@
             pattern=".*expressions.*"/>
         <operand
             xsi:type="workingsets:ExclusionPredicate"
-            excludedWorkingSet="//@setupTasks.17/@workingSets.2"/>
+            excludedWorkingSet="//@setupTasks.16/@workingSets.2"/>
       </predicate>
     </workingSet>
     <workingSet
@@ -618,7 +569,7 @@
         licenseConfirmationDisabled="true">
       <requirement
           name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.13.0,2.14.0)"/>
+          versionRange="[2.17.0,2.18.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
