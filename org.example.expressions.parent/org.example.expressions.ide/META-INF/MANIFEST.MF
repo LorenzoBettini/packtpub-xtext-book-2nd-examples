@@ -7,7 +7,8 @@ Bundle-SymbolicName: org.example.expressions.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.example.expressions,
  org.eclipse.xtext.ide,
- org.eclipse.xtext.xbase.ide,org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.example.expressions.ide,
  org.example.expressions.ide.contentassist.antlr,
