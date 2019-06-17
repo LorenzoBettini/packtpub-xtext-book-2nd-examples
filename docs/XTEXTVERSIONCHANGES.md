@@ -18,7 +18,7 @@ The POMs of the examples have been updated. The Xtext 2.17 project wizard alread
 or you generate a brand new set of projects and draw inspiration from there.
 
 Due to a problem with `javax.annotation` when using Java 11
-(see https://github.com/eclipse/xtext-core/pull/934 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=539038) until Tycho 1.4.0 is release (which fixes this problem), in the `.tests` project (not the `.ui.tests`) this additional configuration must be specified:
+(see https://github.com/eclipse/xtext-core/pull/934 and https://bugs.eclipse.org/bugs/show_bug.cgi?id=539038) until Tycho 1.4.0 is released (which fixes this problem), in the `.tests` project (not the `.ui.tests`) this additional configuration must be specified:
 
 ```xml
 <plugin>
