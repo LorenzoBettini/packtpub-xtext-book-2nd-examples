@@ -4,6 +4,7 @@ matrix:
   fast_finish: true
   include:
     - os: linux
+      dist: trusty
       jdk: openjdk11
       env: DISPLAY=:99.0
     - os: osx
