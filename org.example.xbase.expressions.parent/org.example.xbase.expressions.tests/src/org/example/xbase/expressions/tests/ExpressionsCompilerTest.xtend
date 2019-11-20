@@ -348,7 +348,7 @@ class ExpressionsCompilerTest{
 				public class MyFile {
 				  public static void main(final String[] args) {
 				    int i = 0;
-				    while ((!args[i].isEmpty())) {
+				    while ((!(args[i]).isEmpty())) {
 				      int _plusPlus = i++;
 				      InputOutput.<String>println(args[_plusPlus]);
 				    }
