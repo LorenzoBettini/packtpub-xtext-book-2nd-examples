@@ -108,7 +108,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="xtext.site"
-      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.17.0/"/>
+      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.17.1/"/>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="Eclipse IDE Plugins">
@@ -569,7 +569,7 @@
         licenseConfirmationDisabled="true">
       <requirement
           name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.17.0,2.18.0)"/>
+          versionRange="[2.17.1,2.18.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
