@@ -8,6 +8,8 @@ PLEASE, make sure to read all the required changes in the reverse order, e.g., f
 
 ## Xtext 2.19.0
 
+MWE2 should be updated to 2.11.0, in the POM files and in the target platforms.
+
 ### Xbase
 
 Xbase projects should update the version range of `org.objectweb.asm` in the `MANIFEST.MF` files that already require that bundle: `[7.1.0,7.2.0)`.
