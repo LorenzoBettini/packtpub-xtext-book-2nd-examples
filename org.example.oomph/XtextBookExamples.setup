@@ -104,11 +104,11 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="mwe2.site"
-      value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.10.0/"/>
+      value="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.11.0/"/>
   <setupTask
       xsi:type="setup:VariableTask"
       name="xtext.site"
-      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.18.0/"/>
+      value="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.19.0/"/>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="Eclipse IDE Plugins">
@@ -120,7 +120,7 @@
       <requirement
           name="org.eclipse.wst.xml_ui.feature.feature.group"/>
       <repository
-          url="http://download.eclipse.org/releases/2019-03/"/>
+          url="http://download.eclipse.org/releases/2019-09/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -251,7 +251,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="2019-03"
+      defaultValue="2019-09"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="git:GitCloneTask"
@@ -299,9 +299,9 @@
           rootFolder="${git.clone.location}"
           locateNestedProjects="true"/>
       <repositoryList
-          name="2019-03">
+          name="2019-09">
         <repository
-            url="http://download.eclipse.org/releases/2019-03/"/>
+            url="http://download.eclipse.org/releases/2019-09"/>
         <repository
             url="http://download.itemis.com/updates/releases/2.1.1/"/>
         <repository
@@ -569,7 +569,7 @@
         licenseConfirmationDisabled="true">
       <requirement
           name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.18.0,2.19.0)"/>
+          versionRange="[2.19.0,2.20.0)"/>
       <requirement
           name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement

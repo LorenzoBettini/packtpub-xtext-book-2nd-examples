@@ -8,7 +8,7 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.example.xbase.entities,
  org.junit;bundle-version="4.7.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
- org.objectweb.asm;bundle-version="[7.0.0,7.1.0)";resolution:=optional,
+ org.objectweb.asm;bundle-version="[7.1.0,7.2.0)";resolution:=optional,
  org.eclipse.jdt.core,
  org.eclipse.xtext.testing,
  org.eclipse.xtext.xbase.testing,
