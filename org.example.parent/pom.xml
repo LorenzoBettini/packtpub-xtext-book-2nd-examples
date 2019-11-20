@@ -8,8 +8,8 @@
 
 	<properties>
 		<tycho-version>1.5.0</tycho-version>
-		<xtextVersion>2.18.0</xtextVersion>
-		<mwe2Version>2.10.0</mwe2Version>
+		<xtextVersion>2.19.0</xtextVersion>
+		<mwe2Version>2.11.0</mwe2Version>
 		<eclipseVersion>2019-03</eclipseVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
