@@ -8,7 +8,7 @@ PLEASE, make sure to read all the required changes in the reverse order, e.g., f
 
 ## Xtext 2.18.0
 
-No critical change is required.
+No critical change is required. Here we list only a few changes that might be required.
 
 ### Maven build
 
@@ -20,6 +20,22 @@ The `pom.xml` used in the main project for running MWE2 during the Maven build c
 	<artifactId>xtext-antlr-generator</artifactId>
 	<version>2.1.1</version>
 </dependency>
+```
+
+### Xbase
+
+The Xbase compiler has been slightly changed by generating parenthesis around a few expressions.  The compilation tests will have to be adapted, in case you were comparing the result of the compilation with an expected result.
+
+For example, instead of Java code of the shape
+
+```Java
+while ((!args[i].isEmpty())) {
+```
+
+The Xbase compiler now generates:
+
+```Java
+while ((!(args[i]).isEmpty())) {
 ```
 
 ## Xtext 2.17.0 and Eclipse 2019-03
@@ -120,7 +136,7 @@ Integer _get = a.get(_plusPlus);
 InputOutput.<Integer>println(_get);
 ```
 
-The Xbase compile now generates:
+The Xbase compiler now generates:
 
 ```Java
 InputOutput.<Integer>println(a.get(_plusPlus));
