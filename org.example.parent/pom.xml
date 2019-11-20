@@ -8,7 +8,7 @@
 
 	<properties>
 		<tycho-version>1.3.0</tycho-version>
-		<xtextVersion>2.17.0</xtextVersion>
+		<xtextVersion>2.17.1</xtextVersion>
 		<mwe2Version>2.10.0</mwe2Version>
 		<eclipseVersion>2019-03</eclipseVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
