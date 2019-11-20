@@ -51,7 +51,6 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
-				<module>../org.example.library.parent</module>
 				<module>../org.example.entities.parent</module>
 				<module>../org.example.expressions.parent</module>
 				<module>../org.example.smalljava.parent</module>
@@ -62,6 +61,7 @@
 				<module>../org.example.xbase.expressions.parent</module>
 				<module>../org.example.xbase.entities.parent</module>
 				<module>../org.example.school.parent</module>
+				<module>../org.example.library.parent</module>
 				<module>../org.example.customgreetings.parent</module>
 <!-- 				<module>../org.example.helloidea.parent</module> -->
 			</modules>
