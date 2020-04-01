@@ -8,6 +8,8 @@ PLEASE, make sure to read all the required changes in the reverse order, e.g., f
 
 ## Xtext 2.20.0
 
+**WARNING**: Since Xtext 2.20.0, (see https://www.eclipse.org/Xtext/releasenotes.html#/releasenotes/2019/12/03/version-2-20-0), Java is the default for generating stubs in the Xtext project wizard (except for things like the Generator, tests and a few other APIs). The book is based instead on Xtend code for all the aspects of the DSL implementation, as it used to be also in Xtext before version 2.20.0. If you want to follow along the book and you create projects from scratch (instead of starting from the source code of the examples), you should remove this line `preferXtendStubs = false` in the `.mwe2` file, before running the first generation, or set that property to `true`. 
+
 MWE2 should be updated to 2.11.1, in the POM files.
 
 ### Xbase
