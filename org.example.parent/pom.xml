@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>1.5.0</tycho-version>
+		<tycho-version>1.6.0</tycho-version>
 		<xtextVersion>2.19.0</xtextVersion>
 		<mwe2Version>2.11.0</mwe2Version>
 		<eclipseVersion>2019-03</eclipseVersion>
