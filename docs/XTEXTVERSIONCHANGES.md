@@ -6,6 +6,18 @@ In the following we detail the changes required to adapt the examples to the new
 
 PLEASE, make sure to read all the required changes in the reverse order, e.g., first apply the changes from Xtext 2.10.0 to Xtext 2.11.0, then the changes from Xtext 2.11.0 to Xtext 2.12.0, etc.
 
+## Xtext 2.20.0
+
+**WARNING**: Since Xtext 2.20.0, (see https://www.eclipse.org/Xtext/releasenotes.html#/releasenotes/2019/12/03/version-2-20-0), Java is the default for generating stubs in the Xtext project wizard (except for things like the Generator, tests and a few other APIs). The book is based instead on Xtend code for all the aspects of the DSL implementation, as it used to be also in Xtext before version 2.20.0. If you want to follow along the book and you create projects from scratch (instead of starting from the source code of the examples), you should remove this line `preferXtendStubs = false` in the `.mwe2` file, before running the first generation, or set that property to `true`. 
+
+MWE2 should be updated to 2.11.1, in the POM files.
+
+The `StandardLanguage.newProjectWizardForEclipse` fragment, generating a project wizard for your DSL, has been deprecated, in favor of `StandardLanguage.projectWizard`. In the book such a project wizard is only mentioned and it is implemented in the `SmallJava` example. The source code of the example has been updated accordingly.
+
+### Xbase
+
+Xbase projects should update the version range of `org.objectweb.asm` in the `MANIFEST.MF` files that already require that bundle: `[7.2.0,7.3.0)`.
+
 ## Xtext 2.19.0
 
 MWE2 should be updated to 2.11.0, in the POM files and in the target platforms.

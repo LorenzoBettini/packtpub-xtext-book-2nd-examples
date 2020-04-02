@@ -7,10 +7,10 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho-version>1.5.0</tycho-version>
-		<xtextVersion>2.19.0</xtextVersion>
-		<mwe2Version>2.11.0</mwe2Version>
-		<eclipseVersion>2019-03</eclipseVersion>
+		<tycho-version>1.6.0</tycho-version>
+		<xtextVersion>2.20.0</xtextVersion>
+		<mwe2Version>2.11.1</mwe2Version>
+		<eclipseVersion>2020-03</eclipseVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>

@@ -7,6 +7,11 @@ ISBN: 9781786464965
 
 https://www.packtpub.com/application-development/implementing-domain-specific-languages-xtext-and-xtend-second-edition
 
+IMPORTANT
+====
+
+If you plan to use **Xtext 2.20 or later** when reading this book, please make sure you read the [**WARNING** part of this document's section](https://github.com/LorenzoBettini/packtpub-xtext-book-2nd-examples/blob/task_39-Port_to_Xtext_2.20.0/docs/XTEXTVERSIONCHANGES.md#xtext-2200).
+
 ERRATA and changes in new versions of Xtext
 ====
 
