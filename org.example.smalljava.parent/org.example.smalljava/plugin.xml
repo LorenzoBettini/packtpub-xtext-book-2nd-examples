@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 <plugin>
 	<extension point="org.eclipse.emf.ecore.generated_package">
-		<package 
+		<package
 			uri = "http://www.example.org/smalljava/SmallJava"
 			class = "org.example.smalljava.smallJava.SmallJavaPackage"
 			genModel = "model/generated/SmallJava.genmodel" />
