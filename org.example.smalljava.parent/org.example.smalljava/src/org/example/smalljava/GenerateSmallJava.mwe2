@@ -44,7 +44,7 @@ Workflow {
 			generator = {
 				generateXtendMain = true
 			}
-			newProjectWizardForEclipse = {
+			projectWizard = {
 				generate = true
 			}
 		}

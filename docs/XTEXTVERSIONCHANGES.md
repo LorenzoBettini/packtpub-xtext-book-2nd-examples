@@ -12,6 +12,8 @@ PLEASE, make sure to read all the required changes in the reverse order, e.g., f
 
 MWE2 should be updated to 2.11.1, in the POM files.
 
+The `StandardLanguage.newProjectWizardForEclipse` fragment, generating a project wizard for your DSL, has been deprecated, in favor of `StandardLanguage.projectWizard`. In the book such a project wizard is only mentioned and it is implemented in the `SmallJava` example. The source code of the example has been updated accordingly.
+
 ### Xbase
 
 Xbase projects should update the version range of `org.objectweb.asm` in the `MANIFEST.MF` files that already require that bundle: `[7.2.0,7.3.0)`.

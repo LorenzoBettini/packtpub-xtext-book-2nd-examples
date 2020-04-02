@@ -424,12 +424,31 @@
 	</extension>
 	<extension
 		point="org.eclipse.ui.newWizards">
+		<category id="org.example.smalljava.ui.category" name="SmallJava">
+		</category>
 		<wizard
-			category="org.eclipse.xtext.projectwiz"
-			class="org.example.smalljava.ui.SmallJavaExecutableExtensionFactory:org.example.smalljava.ui.wizard.SmallJavaNewProjectWizard"
+			category="org.example.smalljava.ui.category"
+			class="org.example.smalljava.ui.SmallJavaExecutableExtensionFactory:org.eclipse.xtext.ui.wizard.template.TemplateNewProjectWizard"
 			id="org.example.smalljava.ui.wizard.SmallJavaNewProjectWizard"
 			name="SmallJava Project"
-				project="true">
+			icon="icons/new_SmallJava_proj.gif"
+			project="true">
 		</wizard>
+	</extension>
+	<extension
+		point="org.eclipse.xtext.ui.projectTemplate">
+		<projectTemplateProvider
+			class="org.example.smalljava.ui.SmallJavaExecutableExtensionFactory:org.example.smalljava.ui.wizard.SmallJavaProjectTemplateProvider"
+			grammarName="org.example.smalljava.SmallJava">
+		</projectTemplateProvider>
+	</extension>
+	<extension
+		point="org.eclipse.ui.perspectiveExtensions">
+		<perspectiveExtension targetID="org.eclipse.ui.resourcePerspective">
+			<newWizardShortcut id="org.example.smalljava.ui.wizard.SmallJavaNewProjectWizard"/>
+		</perspectiveExtension>
+		<perspectiveExtension targetID="org.eclipse.jdt.ui.JavaPerspective">
+			<newWizardShortcut id="org.example.smalljava.ui.wizard.SmallJavaNewProjectWizard"/>
+		</perspectiveExtension>
 	</extension>
 </plugin>
