@@ -3,14 +3,16 @@ language: java
 matrix:
   fast_finish: true
   include:
+    # always build this environment
     - os: linux
       dist: xenial
       jdk: openjdk11
       services:
       - xvfb
+    # only on PR, or after merging a PR
     - os: osx
       osx_image: xcode9.3 # JDK 1.8.0_112-b16
-      if: type IN (pull_request)
+      if: type IN (pull_request) OR commit_message =~ /^Merge pull request/
 
 cache:
   directories:
@@ -24,7 +26,6 @@ before_install:
  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export JAVA_HOME=$(/usr/libexec/java_home); fi
  - echo $JAVA_HOME
 
-# Build on MacOSX is triggered only for pull requests
 script:
  - export
  - bash -e ./travis_build.sh
