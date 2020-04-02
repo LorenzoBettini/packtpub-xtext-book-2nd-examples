@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 <plugin>
 	<extension point="org.eclipse.emf.ecore.generated_package">
-		<package 
+		<package
 			uri = "http://www.example.org/xbase/expressions/Expressions"
 			class = "org.example.xbase.expressions.expressions.ExpressionsPackage"
 			genModel = "model/generated/Expressions.genmodel" />

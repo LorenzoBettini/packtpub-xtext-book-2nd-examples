@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 <plugin>
 	<extension point="org.eclipse.emf.ecore.generated_package">
-		<package 
+		<package
 			uri = "http://www.example.org/customgreetings/Greetings"
 			class = "org.example.customgreetings.greetings.GreetingsPackage"
 			genModel = "model/custom/Greetings.genmodel" />

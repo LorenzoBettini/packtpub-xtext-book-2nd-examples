@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 <plugin>
 	<extension point="org.eclipse.emf.ecore.generated_package">
-		<package 
+		<package
 			uri = "http://www.example.org/helloweb/HelloWeb"
 			class = "org.example.helloweb.helloWeb.HelloWebPackage"
 			genModel = "model/generated/HelloWeb.genmodel" />
